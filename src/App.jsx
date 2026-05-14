@@ -173,7 +173,6 @@
 //   "#3b82f6","#f59e0b","#10b981","#ef4444","#8b5cf6","#ec4899","#f97316","#6366f1"
 // ];
 
-// // ─── REAL THUMBNAIL IMAGES ────────────────────────────────────────────────────
 // const THUMB_IMAGES = {
 //   1:  "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
 //   2:  "https://cdn-icons-png.flaticon.com/512/2830/2830284.png",
@@ -261,28 +260,38 @@
 //   higher: ["GATE", "CAT/MBA", "GRE/GMAT", "Study Abroad", "Research", "PhD"],
 // };
 
+// // ─── CHANGE 2: Higher Education now has India/Abroad sub-options ────────────────
+// const HIGHER_INDIA_ABROAD = {
+//   "GATE": "India",
+//   "CAT/MBA": "India",
+//   "GRE/GMAT": "Abroad",
+//   "Study Abroad": "Abroad",
+//   "Research": "Both",
+//   "PhD": "Both",
+// };
+
 // const INIT_STUDENTS = [
-//   { id: "s1", name: "Arjun Sharma", email: "arjun@email.com", joined: "2024-01-15", completed: 3, avatar: "AS" },
-//   { id: "s2", name: "Priya Reddy",  email: "priya@email.com",  joined: "2024-02-20", completed: 1, avatar: "PR" },
-//   { id: "s3", name: "Rahul Gupta",  email: "rahul@email.com",  joined: "2024-03-10", completed: 0, avatar: "RG" },
+//   { id: "s1", name: "Arjun Sharma", email: "arjun@email.com", joined: "2024-01-15", completed: 3, avatar: "AS", college: "JNTU Hyderabad" },
+//   { id: "s2", name: "Priya Reddy",  email: "priya@email.com",  joined: "2024-02-20", completed: 1, avatar: "PR", college: "Osmania University" },
+//   { id: "s3", name: "Rahul Gupta",  email: "rahul@email.com",  joined: "2024-03-10", completed: 0, avatar: "RG", college: "IIT Bombay" },
 // ];
 
 // const ALL_MATERIALS = [
-//   { id: 1,  title: "Java Programming",       category: "private",    sub: "IT",            type: "free",    emoji:"☕", topics: 12, progress: 70, pages: 340, downloads: 1240, bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 2,  title: "Banking Fundamentals",   category: "private",    sub: "Banking",       type: "free",    emoji:"🏦", topics: 8,  progress: 50, pages: 210, downloads: 980,  bookmarked: true,  studentId: null, uploadType: null, fileLink: "" },
-//   { id: 3,  title: "Data Structures & Algo", category: "private",    sub: "IT",            type: "premium", emoji:"🌲", topics: 15, progress: 30, pages: 480, downloads: 2100, bookmarked: false, studentId: null, uploadType: "pdf",  fileLink: "https://example.com/dsa.pdf" },
-//   { id: 4,  title: "UPSC History Notes",     category: "government", sub: "UPSC",          type: "free",    emoji:"📜", topics: 20, progress: 60, pages: 600, downloads: 3400, bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 5,  title: "SSC Mathematics",        category: "government", sub: "SSC",           type: "free",    emoji:"📐", topics: 10, progress: 0,  pages: 280, downloads: 1800, bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 6,  title: "IBPS PO Guide",          category: "government", sub: "Banking (Govt)",type: "premium", emoji:"🏧", topics: 14, progress: 0,  pages: 390, downloads: 2200, bookmarked: true,  studentId: null, uploadType: "link", fileLink: "https://ibps.in/study-material" },
-//   { id: 7,  title: "CAT Verbal Ability",     category: "higher",     sub: "CAT/MBA",       type: "premium", emoji:"📝", topics: 9,  progress: 20, pages: 240, downloads: 760,  bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 8,  title: "GRE Vocabulary",         category: "higher",     sub: "GRE/GMAT",      type: "free",    emoji:"🔤", topics: 6,  progress: 40, pages: 180, downloads: 540,  bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 9,  title: "Agricultural Science",   category: "government", sub: "State PSC",     type: "free",    emoji:"🌾", topics: 11, progress: 0,  pages: 320, downloads: 890,  bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 10, title: "Python for Beginners",   category: "private",    sub: "IT",            type: "free",    emoji:"🐍", topics: 10, progress: 85, pages: 290, downloads: 3100, bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 11, title: "Railway RRB Guide",      category: "government", sub: "Railways",      type: "premium", emoji:"🚂", topics: 13, progress: 0,  pages: 410, downloads: 1650, bookmarked: false, studentId: null, uploadType: "pdf",  fileLink: "https://example.com/rrb.pdf" },
-//   { id: 12, title: "MBA Case Studies",       category: "higher",     sub: "CAT/MBA",       type: "premium", emoji:"💼", topics: 8,  progress: 0,  pages: 200, downloads: 430,  bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 13, title: "Digital Marketing",      category: "private",    sub: "Marketing",     type: "free",    emoji:"📊", topics: 7,  progress: 55, pages: 190, downloads: 670,  bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 14, title: "Research Methodology",   category: "higher",     sub: "Research",      type: "free",    emoji:"🔬", topics: 5,  progress: 10, pages: 160, downloads: 310,  bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
-//   { id: 15, title: "Defence NDA Prep",       category: "government", sub: "Defence",       type: "premium", emoji:"⚔️", topics: 16, progress: 0,  pages: 500, downloads: 1200, bookmarked: false, studentId: null, uploadType: null, fileLink: "" },
+//   { id: 1,  title: "Java Programming",       category: "private",    sub: "IT",            type: "free",    emoji:"☕", topics: 12, progress: 70, pages: 340, downloads: 1240, bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
+//   { id: 2,  title: "Banking Fundamentals",   category: "private",    sub: "Banking",       type: "free",    emoji:"🏦", topics: 8,  progress: 50, pages: 210, downloads: 980,  bookmarked: true,  studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
+//   { id: 3,  title: "Data Structures & Algo", category: "private",    sub: "IT",            type: "premium", emoji:"🌲", topics: 15, progress: 30, pages: 480, downloads: 2100, bookmarked: false, studentId: null, uploadType: "pdf",  fileLink: "https://example.com/dsa.pdf", indiaOrAbroad: null },
+//   { id: 4,  title: "UPSC History Notes",     category: "government", sub: "UPSC",          type: "free",    emoji:"📜", topics: 20, progress: 60, pages: 600, downloads: 3400, bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
+//   { id: 5,  title: "SSC Mathematics",        category: "government", sub: "SSC",           type: "free",    emoji:"📐", topics: 10, progress: 0,  pages: 280, downloads: 1800, bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
+//   { id: 6,  title: "IBPS PO Guide",          category: "government", sub: "Banking (Govt)",type: "premium", emoji:"🏧", topics: 14, progress: 0,  pages: 390, downloads: 2200, bookmarked: true,  studentId: null, uploadType: "link", fileLink: "https://ibps.in/study-material", indiaOrAbroad: null },
+//   { id: 7,  title: "CAT Verbal Ability",     category: "higher",     sub: "CAT/MBA",       type: "premium", emoji:"📝", topics: 9,  progress: 20, pages: 240, downloads: 760,  bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: "India" },
+//   { id: 8,  title: "GRE Vocabulary",         category: "higher",     sub: "GRE/GMAT",      type: "free",    emoji:"🔤", topics: 6,  progress: 40, pages: 180, downloads: 540,  bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: "Abroad" },
+//   { id: 9,  title: "Agricultural Science",   category: "government", sub: "State PSC",     type: "free",    emoji:"🌾", topics: 11, progress: 0,  pages: 320, downloads: 890,  bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
+//   { id: 10, title: "Python for Beginners",   category: "private",    sub: "IT",            type: "free",    emoji:"🐍", topics: 10, progress: 85, pages: 290, downloads: 3100, bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
+//   { id: 11, title: "Railway RRB Guide",      category: "government", sub: "Railways",      type: "premium", emoji:"🚂", topics: 13, progress: 0,  pages: 410, downloads: 1650, bookmarked: false, studentId: null, uploadType: "pdf",  fileLink: "https://example.com/rrb.pdf", indiaOrAbroad: null },
+//   { id: 12, title: "MBA Case Studies",       category: "higher",     sub: "CAT/MBA",       type: "premium", emoji:"💼", topics: 8,  progress: 0,  pages: 200, downloads: 430,  bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: "India" },
+//   { id: 13, title: "Digital Marketing",      category: "private",    sub: "Marketing",     type: "free",    emoji:"📊", topics: 7,  progress: 55, pages: 190, downloads: 670,  bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
+//   { id: 14, title: "Research Methodology",   category: "higher",     sub: "Research",      type: "free",    emoji:"🔬", topics: 5,  progress: 10, pages: 160, downloads: 310,  bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: "Both" },
+//   { id: 15, title: "Defence NDA Prep",       category: "government", sub: "Defence",       type: "premium", emoji:"⚔️", topics: 16, progress: 0,  pages: 500, downloads: 1200, bookmarked: false, studentId: null, uploadType: null, fileLink: "", indiaOrAbroad: null },
 // ];
 
 // const JAVA_TOPICS = [
@@ -306,6 +315,26 @@
 // ];
 // let _globalMaterials = ALL_MATERIALS.map(m => ({ ...m }));
 // let _globalStudents  = INIT_STUDENTS.map(s => ({ ...s }));
+
+// // ─── STUDENT MATERIAL READ TRACKING (for analytics) ───────────────────────────
+// const COLLEGE_READING_DATA = [
+//   { college: "JNTU Hyderabad",           readers: 1240, materials: ["Java Programming","Python for Beginners","DSA","UPSC History Notes","SSC Mathematics"] },
+//   { college: "Osmania University",        readers: 980,  materials: ["Banking Fundamentals","IBPS PO Guide","CAT Verbal Ability","Research Methodology"] },
+//   { college: "IIT Bombay",               readers: 760,  materials: ["Data Structures & Algo","Python for Beginners","Java Programming","GRE Vocabulary"] },
+//   { college: "NIT Warangal",             readers: 640,  materials: ["Java Programming","DSA","Digital Marketing","Railway RRB Guide"] },
+//   { college: "VIT Vellore",              readers: 520,  materials: ["Python for Beginners","Java Programming","CAT Verbal Ability","MBA Case Studies"] },
+//   { college: "BITS Pilani",              readers: 480,  materials: ["Data Structures & Algo","Research Methodology","GRE Vocabulary","MBA Case Studies"] },
+//   { college: "Hyderabad Central Univ",   readers: 340,  materials: ["UPSC History Notes","SSC Mathematics","Agricultural Science","Defence NDA Prep"] },
+//   { college: "IIT Hyderabad",            readers: 290,  materials: ["Python for Beginners","Java Programming","DSA","Digital Marketing"] },
+// ];
+
+// const MOST_VIEWED_MATERIALS = [
+//   { id: 4,  title: "UPSC History Notes",     views: 8420, reads: 6200, category: "government", emoji: "📜" },
+//   { id: 10, title: "Python for Beginners",   views: 7890, reads: 5900, category: "private",    emoji: "🐍" },
+//   { id: 1,  title: "Java Programming",       views: 6540, reads: 4800, category: "private",    emoji: "☕" },
+//   { id: 3,  title: "Data Structures & Algo", views: 5930, reads: 3900, category: "private",    emoji: "🌲" },
+//   { id: 5,  title: "SSC Mathematics",        views: 4820, reads: 3400, category: "government", emoji: "📐" },
+// ];
 
 // // ─── TOAST ────────────────────────────────────────────────────────────────────
 // function useToast() {
@@ -414,12 +443,10 @@
 //   });
 
 //   const hov = hovered !== null ? slices[hovered] : null;
-//   const scale = (i) => i === hovered ? 1.06 : 1;
 
 //   return (
 //     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.55)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:99000,backdropFilter:"blur(6px)",padding:20}} onClick={e=>e.target===e.currentTarget&&onClose()}>
 //       <div style={{background:C.surface,borderRadius:24,maxWidth:820,width:"100%",boxShadow:C.shadowLg,animation:"cardIn 0.4s cubic-bezier(.4,0,.2,1)",overflow:"hidden"}}>
-//         {/* Header */}
 //         <div style={{background:"linear-gradient(135deg,#eff6ff,#dbeafe)",borderBottom:`1px solid #bfdbfe`,padding:"22px 28px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
 //           <div>
 //             <div style={{fontSize:11,color:"#1e40af",fontWeight:800,letterSpacing:2,textTransform:"uppercase",marginBottom:3}}>Analytics Overview</div>
@@ -429,7 +456,6 @@
 //         </div>
 
 //         <div style={{padding:"28px 32px",display:"flex",gap:32,alignItems:"flex-start",flexWrap:"wrap"}}>
-//           {/* PIE */}
 //           <div style={{position:"relative",flexShrink:0}}>
 //             <svg width={size} height={size} style={{filter:"drop-shadow(0 8px 24px rgba(59,130,246,0.15))"}}>
 //               {slices.map((sl, i) => {
@@ -452,9 +478,7 @@
 //                   </g>
 //                 );
 //               })}
-//               {/* Donut hole */}
 //               <circle cx={cx} cy={cy} r={innerR} fill={C.surface}/>
-//               {/* Center text */}
 //               {hov ? (
 //                 <>
 //                   <text x={cx} y={cy-10} textAnchor="middle" fontSize={11} fontWeight={800} fill={hov.color}>{hov.icon}</text>
@@ -468,7 +492,6 @@
 //                 </>
 //               )}
 //             </svg>
-//             {/* Hover tooltip */}
 //             {hov && (
 //               <div style={{position:"absolute",bottom:-18,left:"50%",transform:"translateX(-50%)",background:hov.color,color:"#fff",borderRadius:10,padding:"7px 16px",fontSize:12,fontWeight:700,whiteSpace:"nowrap",boxShadow:`0 4px 14px ${hov.color}44`,animation:"fadeUp 0.15s ease"}}>
 //                 {hov.icon} {hov.name} · {hov.pct}% · {hov.users.toLocaleString()} users
@@ -476,7 +499,6 @@
 //             )}
 //           </div>
 
-//           {/* LEGEND + STATS */}
 //           <div style={{flex:1,minWidth:280}}>
 //             <div style={{fontSize:12,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>Service Breakdown</div>
 //             <div style={{display:"flex",flexDirection:"column",gap:8}}>
@@ -509,12 +531,127 @@
 //   );
 // }
 
-// // ─── SERVICE DETAIL MODAL ──────────────────────────────────────────────────────
+// // ─── CHANGE 3: E-Library Detail Modal for Overall Dashboard (full analytics, no approval) ──────
+// function ELibraryDetailModal({ service: s, onClose }) {
+//   const [animIn, setAnimIn] = useState(false);
+//   useEffect(() => { setTimeout(() => setAnimIn(true), 40); }, []);
+
+//   return (
+//     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.55)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:9500,backdropFilter:"blur(6px)",padding:20}} onClick={e=>e.target===e.currentTarget&&onClose()}>
+//       <div style={{background:C.surface,borderRadius:24,maxWidth:780,width:"100%",maxHeight:"92vh",overflow:"auto",boxShadow:C.shadowLg,opacity:animIn?1:0,transform:animIn?"translateY(0)":"translateY(20px)",transition:"all 0.35s ease"}}>
+//         {/* Hero */}
+//         <div style={{background:s.gradient,padding:"28px 28px 22px",borderBottom:`1px solid ${s.border}`,borderRadius:"24px 24px 0 0",position:"relative",overflow:"hidden"}}>
+//           <div style={{position:"absolute",top:-30,right:-30,width:120,height:120,borderRadius:"50%",background:`radial-gradient(circle,${s.color}22,transparent)`,animation:"orbPulse 4s ease-in-out infinite"}}/>
+//           <button onClick={onClose} style={{position:"absolute",top:14,right:14,background:"rgba(255,255,255,0.85)",border:`1px solid ${s.border}`,borderRadius:10,padding:"6px 11px",cursor:"pointer",fontSize:13,color:C.textSec,fontFamily:"inherit",fontWeight:700,backdropFilter:"blur(4px)"}}>✕ Close</button>
+//           <div style={{display:"flex",alignItems:"center",gap:18}}>
+//             <div style={{width:64,height:64,borderRadius:18,background:s.bg,display:"flex",alignItems:"center",justifyContent:"center",fontSize:32,boxShadow:`0 4px 20px ${s.color}33`,border:`2px solid ${s.border}`}}>{s.icon}</div>
+//             <div>
+//               <h2 style={{margin:"0 0 4px",fontSize:22,fontWeight:900,color:s.color}}>{s.name}</h2>
+//               <p style={{margin:0,fontSize:13,color:C.textSec,fontWeight:600}}>{s.description}</p>
+//               <div style={{marginTop:8,display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
+//                 <span style={{background:`${s.color}18`,color:s.color,borderRadius:8,padding:"4px 12px",fontSize:12,fontWeight:800,border:`1px solid ${s.border}`}}>👥 {s.users.toLocaleString()} Users</span>
+//                 <span style={{background:s.trendUp?"#f0fdf4":"#fef2f2",color:s.trendUp?"#166534":"#991b1b",borderRadius:8,padding:"4px 12px",fontSize:12,fontWeight:800,border:`1.5px solid ${s.trendUp?"#86efac":"#fca5a5"}`}}>{s.trendUp?"↑":"↓"} {s.trend} this month</span>
+//               </div>
+//             </div>
+//           </div>
+//           <div style={{marginTop:16,background:"rgba(255,255,255,0.6)",borderRadius:10,padding:"8px 14px",backdropFilter:"blur(4px)",border:`1px solid ${s.border}`}}>
+//             <span style={{fontSize:12,color:C.textSec,fontWeight:700}}>🏆 Most active college: </span>
+//             <span style={{fontSize:13,fontWeight:900,color:s.color}}>{s.topCollege}</span>
+//           </div>
+//         </div>
+
+//         <div style={{padding:"24px 26px"}}>
+//           {/* Key Metrics */}
+//           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>📊 Key Metrics</div>
+//           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:12,marginBottom:26}}>
+//             {[
+//               {icon:"📚",label:"Materials",value:s.stats.materials,color:s.color,bg:s.bg},
+//               {icon:"⬇️",label:"Total Downloads",value:s.stats.downloads.toLocaleString(),color:"#1e40af",bg:"#eff6ff"},
+//               {icon:"📨",label:"Total Requests",value:s.stats.requests,color:"#92400e",bg:"#fffbeb"},
+//               {icon:"✅",label:"Approved",value:s.stats.approved,color:"#166534",bg:"#f0fdf4"},
+//               {icon:"⏳",label:"Pending",value:s.stats.pending,color:"#d97706",bg:"#fffbeb"},
+//               {icon:"❌",label:"Rejected",value:s.stats.rejected,color:"#991b1b",bg:"#fef2f2"},
+//             ].map((item,i)=>(
+//               <div key={i} style={{background:item.bg,border:`1.5px solid ${item.color}33`,borderRadius:14,padding:"16px 18px",animation:`cardIn 0.35s ease ${i*0.06}s both`}}>
+//                 <div style={{fontSize:20,marginBottom:6}}>{item.icon}</div>
+//                 <div style={{fontSize:22,fontWeight:900,color:item.color}}>{item.value}</div>
+//                 <div style={{fontSize:11,color:C.textSec,fontWeight:700,marginTop:2}}>{item.label}</div>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* College-wise Downloads */}
+//           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>🏛️ College-wise Downloads & Users</div>
+//           <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:26}}>
+//             {s.stats.collegeStats.map((clg, i) => {
+//               const maxDl = s.stats.collegeStats[0].downloads;
+//               const pct = Math.round((clg.downloads / maxDl) * 100);
+//               const medals = ["🥇","🥈","🥉"];
+//               return (
+//                 <div key={clg.name} style={{background:C.elevated,border:`1px solid ${C.border}`,borderRadius:14,padding:"14px 18px",animation:`cardIn 0.35s ease ${i*0.07}s both`}}>
+//                   <div style={{display:"flex",justifyContent:"space-between",marginBottom:8,alignItems:"center"}}>
+//                     <div style={{display:"flex",alignItems:"center",gap:10}}>
+//                       <span style={{fontSize:16}}>{medals[i]||`#${i+1}`}</span>
+//                       <div>
+//                         <div style={{fontWeight:800,fontSize:14,color:C.textPri}}>{clg.name}</div>
+//                         <div style={{fontSize:11,color:C.textMut,fontWeight:600}}>👥 {clg.users.toLocaleString()} active readers</div>
+//                       </div>
+//                     </div>
+//                     <div style={{textAlign:"right"}}>
+//                       <div style={{fontSize:14,fontWeight:900,color:s.color}}>⬇️ {clg.downloads.toLocaleString()}</div>
+//                       <div style={{fontSize:11,color:C.textMut,fontWeight:600}}>downloads</div>
+//                     </div>
+//                   </div>
+//                   <div style={{height:8,background:C.border,borderRadius:8,overflow:"hidden"}}>
+//                     <div style={{width:`${pct}%`,height:"100%",background:`linear-gradient(90deg,${s.color},${s.color}77)`,borderRadius:8,transition:"width 1.2s ease"}}/>
+//                   </div>
+//                   <div style={{display:"flex",justifyContent:"space-between",marginTop:4}}>
+//                     <span style={{fontSize:10,color:C.textMut,fontWeight:600}}>{pct}% of top</span>
+//                     <span style={{fontSize:10,color:s.color,fontWeight:700}}>{clg.downloads.toLocaleString()} total</span>
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
+
+//           {/* Most Viewed Materials */}
+//           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>📖 Most Viewed Materials</div>
+//           <div style={{display:"flex",flexDirection:"column",gap:8}}>
+//             {MOST_VIEWED_MATERIALS.map((mat,i)=>{
+//               const cat = CATEGORIES[mat.category];
+//               const readPct = Math.round((mat.reads/mat.views)*100);
+//               return (
+//                 <div key={mat.id} style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 16px",display:"flex",alignItems:"center",gap:14,animation:`cardIn 0.3s ease ${i*0.06}s both`}}>
+//                   <div style={{width:36,height:36,borderRadius:10,background:cat.bg,display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,flexShrink:0}}>{mat.emoji}</div>
+//                   <div style={{flex:1}}>
+//                     <div style={{fontWeight:700,fontSize:13,marginBottom:3}}>{mat.title}</div>
+//                     <div style={{display:"flex",gap:12,fontSize:11,color:C.textMut,fontWeight:600}}>
+//                       <span>👁 {mat.views.toLocaleString()} views</span>
+//                       <span>📖 {mat.reads.toLocaleString()} reads</span>
+//                       <span style={{color:cat.color,fontWeight:700}}>{readPct}% read rate</span>
+//                     </div>
+//                   </div>
+//                   <div style={{width:80}}>
+//                     <div style={{height:6,background:C.border,borderRadius:6,overflow:"hidden"}}>
+//                       <div style={{width:`${readPct}%`,height:"100%",background:cat.color,borderRadius:6}}/>
+//                     </div>
+//                   </div>
+//                   <span style={{background:cat.bg,color:cat.color,borderRadius:6,padding:"3px 10px",fontSize:10,fontWeight:700,border:`1px solid ${cat.border}`,flexShrink:0}}>#{i+1}</span>
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// // ─── SERVICE DETAIL MODAL (generic, for non-elibrary services) ──────────────────
 // function ServiceDetailModal({ service: s, onClose }) {
 //   const [animIn, setAnimIn] = useState(false);
 //   useEffect(() => { setTimeout(() => setAnimIn(true), 40); }, []);
 
-//   const isLibrary = s.id === "elibrary";
 //   const statEntries = Object.entries(s.stats).filter(([k]) => !["collegeStats","topCollege"].includes(k));
 
 //   const statLabels = {
@@ -539,12 +676,9 @@
 //     contests:"🏆",participants:"👥",problems:"🧩",winners:"🥇",
 //   };
 
-//   const highlightKeys = isLibrary ? ["downloads","requests","pending"] : [];
-
 //   return (
 //     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.55)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:9500,backdropFilter:"blur(6px)",padding:20}} onClick={e=>e.target===e.currentTarget&&onClose()}>
 //       <div style={{background:C.surface,borderRadius:24,maxWidth:640,width:"100%",maxHeight:"90vh",overflow:"auto",boxShadow:C.shadowLg,animation:"cardIn 0.35s ease",opacity:animIn?1:0,transform:animIn?"translateY(0)":"translateY(20px)",transition:"all 0.35s ease"}}>
-//         {/* Hero */}
 //         <div style={{background:s.gradient,padding:"28px 28px 22px",borderBottom:`1px solid ${s.border}`,borderRadius:"24px 24px 0 0",position:"relative",overflow:"hidden"}}>
 //           <div style={{position:"absolute",top:-30,right:-30,width:120,height:120,borderRadius:"50%",background:`radial-gradient(circle,${s.color}22,transparent)`,animation:"orbPulse 4s ease-in-out infinite"}}/>
 //           <button onClick={onClose} style={{position:"absolute",top:14,right:14,background:"rgba(255,255,255,0.85)",border:`1px solid ${s.border}`,borderRadius:10,padding:"6px 11px",cursor:"pointer",fontSize:13,color:C.textSec,fontFamily:"inherit",fontWeight:700,backdropFilter:"blur(4px)"}}>✕</button>
@@ -565,60 +699,21 @@
 //           </div>
 //         </div>
 
-//         {/* Stats Grid */}
 //         <div style={{padding:"24px 26px"}}>
 //           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>Key Metrics</div>
-//           <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:12,marginBottom:isLibrary?22:0}}>
-//             {statEntries.map(([k,v],i) => {
-//               const isHL = highlightKeys.includes(k);
-//               return (
-//                 <div key={k} style={{
-//                   background: isHL ? (k==="pending"?"#fffbeb":k==="approved"?"#f0fdf4":"#fef2f2") : C.elevated,
-//                   border:`1.5px solid ${isHL?(k==="pending"?"#fcd34d":k==="approved"?"#86efac":"#fca5a5"):C.border}`,
-//                   borderRadius:14,padding:"16px 18px",
-//                   animation:`cardIn 0.35s ease ${i*0.06}s both`,
-//                   boxShadow: isHL ? `0 4px 16px ${s.color}11` : "none",
-//                 }}>
-//                   <div style={{fontSize:20,marginBottom:6}}>{statIcons[k]||"📊"}</div>
-//                   <div style={{fontSize:22,fontWeight:900,color:isHL?(k==="pending"?"#92400e":k==="approved"?"#166534":"#991b1b"):s.color}}>{typeof v==="number"?v.toLocaleString():v}</div>
-//                   <div style={{fontSize:11,color:C.textSec,fontWeight:700,marginTop:2}}>{statLabels[k]||k}</div>
-//                 </div>
-//               );
-//             })}
-//           </div>
-
-//           {/* E-Library College Stats */}
-//           {isLibrary && s.stats.collegeStats && (
-//             <div>
-//               <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:12}}>🏛️ College-wise Downloads</div>
-//               <div style={{display:"flex",flexDirection:"column",gap:9}}>
-//                 {s.stats.collegeStats.map((clg, i) => {
-//                   const maxDl = s.stats.collegeStats[0].downloads;
-//                   const pct = Math.round((clg.downloads / maxDl) * 100);
-//                   return (
-//                     <div key={clg.name} style={{background:C.elevated,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 16px",animation:`cardIn 0.35s ease ${i*0.07}s both`}}>
-//                       <div style={{display:"flex",justifyContent:"space-between",marginBottom:7,alignItems:"center"}}>
-//                         <div style={{display:"flex",alignItems:"center",gap:8}}>
-//                           {i===0&&<span style={{fontSize:14}}>🥇</span>}
-//                           {i===1&&<span style={{fontSize:14}}>🥈</span>}
-//                           {i===2&&<span style={{fontSize:14}}>🥉</span>}
-//                           {i>2&&<span style={{fontSize:12,color:C.textMut,fontWeight:700,width:20,textAlign:"center"}}>#{i+1}</span>}
-//                           <span style={{fontWeight:700,fontSize:13,color:C.textPri}}>{clg.name}</span>
-//                         </div>
-//                         <div style={{textAlign:"right"}}>
-//                           <span style={{fontSize:12,fontWeight:800,color:s.color}}>⬇️ {clg.downloads.toLocaleString()}</span>
-//                           <span style={{fontSize:11,color:C.textMut,marginLeft:8}}>👥 {clg.users}</span>
-//                         </div>
-//                       </div>
-//                       <div style={{height:6,background:C.border,borderRadius:6,overflow:"hidden"}}>
-//                         <div style={{width:`${pct}%`,height:"100%",background:`linear-gradient(90deg,${s.color},${s.color}88)`,borderRadius:6,transition:"width 1s ease"}}/>
-//                       </div>
-//                     </div>
-//                   );
-//                 })}
+//           <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:12}}>
+//             {statEntries.map(([k,v],i) => (
+//               <div key={k} style={{
+//                 background:C.elevated, border:`1.5px solid ${C.border}`,
+//                 borderRadius:14, padding:"16px 18px",
+//                 animation:`cardIn 0.35s ease ${i*0.06}s both`,
+//               }}>
+//                 <div style={{fontSize:20,marginBottom:6}}>{statIcons[k]||"📊"}</div>
+//                 <div style={{fontSize:22,fontWeight:900,color:s.color}}>{typeof v==="number"?v.toLocaleString():v}</div>
+//                 <div style={{fontSize:11,color:C.textSec,fontWeight:700,marginTop:2}}>{statLabels[k]||k}</div>
 //               </div>
-//             </div>
-//           )}
+//             ))}
+//           </div>
 //         </div>
 //       </div>
 //     </div>
@@ -642,6 +737,8 @@
 //     transform: animIn ? "translateY(0) scale(1)" : "translateY(28px) scale(0.96)",
 //     transition: `all 0.5s cubic-bezier(.4,0,.2,1) ${i * 0.07}s`,
 //   });
+
+//   const handleServiceClick = (s) => setSelectedService(s);
 
 //   return (
 //     <div style={{ minHeight: "100vh", background: "linear-gradient(160deg,#f0f9ff 0%,#e0f2fe 40%,#f0fdf4 100%)", fontFamily: "'Nunito',sans-serif", color: C.textPri }}>
@@ -693,15 +790,12 @@
 //       </div>
 
 //       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "36px 32px" }}>
-
-//         {/* HERO STATS */}
 //         <div style={{ ...animStyle(0), marginBottom: 36 }}>
 //           <div style={{ marginBottom: 6, fontSize: 11, color: "#3b82f6", fontWeight: 800, letterSpacing: 2, textTransform: "uppercase" }}>Platform Analytics</div>
 //           <h1 style={{ fontSize: 34, fontWeight: 900, margin: "0 0 6px", color: C.textPri, letterSpacing: -1 }}>All Services Overview</h1>
 //           <p style={{ color: C.textSec, fontSize: 15, margin: 0, fontWeight: 600 }}>Real-time usage analytics across all OYS platform services</p>
 //         </div>
 
-//         {/* SUMMARY CARDS */}
 //         <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 16, marginBottom: 40, ...animStyle(1) }}>
 //           {[
 //             { label: "Total Services", value: "8", icon: "🌐", color: "#3b82f6", bg: "#eff6ff", border: "#bfdbfe" },
@@ -723,7 +817,6 @@
 //           ))}
 //         </div>
 
-//         {/* SECTION HEADING */}
 //         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 22, ...animStyle(2) }}>
 //           <div>
 //             <div style={{ fontSize: 11, color: "#3b82f6", fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", marginBottom: 4 }}>All Services</div>
@@ -734,7 +827,6 @@
 //           </div>
 //         </div>
 
-//         {/* SERVICE CARDS */}
 //         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
 //           {SERVICES.map((s, i) => {
 //             const isHov = hoveredCard === i;
@@ -744,27 +836,22 @@
 //             return (
 //               <div key={s.id} className="svc-card"
 //                 onMouseEnter={() => setHoveredCard(i)} onMouseLeave={() => setHoveredCard(null)}
-//                 onClick={() => setSelectedService(s)}
+//                 onClick={() => handleServiceClick(s)}
 //                 style={{
 //                   background: C.surface, borderRadius: 20, border: `2px solid ${isHov ? s.color : C.border}`,
 //                   overflow: "hidden", cursor: "pointer", boxShadow: C.shadow,
 //                   animation: `cardIn 0.45s ease ${i * 0.06}s both`, position: "relative",
 //                 }}>
-//                 {/* Shimmer on hover */}
 //                 {isHov && <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.35) 50%,transparent 60%)", animation: "shimmer 1.4s ease", pointerEvents: "none", zIndex: 1 }} />}
 
 //                 <div style={{ display: "flex", alignItems: "center", gap: 0 }}>
-//                   {/* Color strip */}
 //                   <div style={{ width: 6, alignSelf: "stretch", background: s.color, flexShrink: 0, borderRadius: "20px 0 0 20px", transition: "width 0.2s", ...(isHov ? { width: 8 } : {}) }} />
-
-//                   {/* Icon */}
 //                   <div style={{ background: s.gradient, padding: "22px 24px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
 //                     <div style={{ width: 60, height: 60, borderRadius: 16, background: "rgba(255,255,255,0.7)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28, boxShadow: `0 4px 16px ${s.color}22`, border: `2px solid ${s.border}`, transition: "transform 0.2s", transform: isHov ? "scale(1.1) rotate(-3deg)" : "scale(1)" }}>
 //                       {s.icon}
 //                     </div>
 //                   </div>
 
-//                   {/* Main content */}
 //                   <div style={{ flex: 1, padding: "20px 22px" }}>
 //                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 8 }}>
 //                       <div>
@@ -781,7 +868,6 @@
 //                       </div>
 //                     </div>
 
-//                     {/* Progress bar */}
 //                     <div style={{ marginBottom: 12 }}>
 //                       <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: C.textMut, marginBottom: 4, fontWeight: 600 }}>
 //                         <span>Platform share</span>
@@ -792,7 +878,6 @@
 //                       </div>
 //                     </div>
 
-//                     {/* Quick stats row */}
 //                     <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
 //                       <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: C.textSec, fontWeight: 700 }}>
 //                         <span>🏆</span><span>{s.topCollege}</span>
@@ -800,7 +885,6 @@
 //                       <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, fontWeight: 800, color: s.trendUp ? "#166534" : "#991b1b", background: s.trendUp ? "#f0fdf4" : "#fef2f2", padding: "3px 10px", borderRadius: 7, border: `1px solid ${s.trendUp ? "#86efac" : "#fca5a5"}` }}>
 //                         {s.trendUp ? "↑" : "↓"} {s.trend}
 //                       </div>
-//                       {/* Library specific quick stats */}
 //                       {isLibrary && (
 //                         <>
 //                           <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: "#1e40af", fontWeight: 700, background: "#eff6ff", padding: "3px 10px", borderRadius: 7, border: "1px solid #bfdbfe" }}>
@@ -825,7 +909,6 @@
 //           })}
 //         </div>
 
-//         {/* PIE CTA BANNER */}
 //         <div style={{ marginTop: 40, background: "linear-gradient(135deg,#eff6ff,#dbeafe)", border: "2px solid #93c5fd", borderRadius: 20, padding: "24px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, flexWrap: "wrap", ...animStyle(10), position: "relative", overflow: "hidden" }}>
 //           <div style={{ position: "absolute", top: -20, right: -20, width: 120, height: 120, borderRadius: "50%", background: "radial-gradient(circle,rgba(99,102,241,0.15),transparent)", animation: "orbPulse 4s ease-in-out infinite" }} />
 //           <div>
@@ -846,7 +929,13 @@
 //       </div>
 
 //       {showPie && <PieChart services={SERVICES} onClose={() => setShowPie(false)} />}
-//       {selectedService && <ServiceDetailModal service={selectedService} onClose={() => setSelectedService(null)} />}
+//       {/* CHANGE 3: E-Library gets its own rich analytics modal, others get generic */}
+//       {selectedService && selectedService.id === "elibrary" && (
+//         <ELibraryDetailModal service={selectedService} onClose={() => setSelectedService(null)} />
+//       )}
+//       {selectedService && selectedService.id !== "elibrary" && (
+//         <ServiceDetailModal service={selectedService} onClose={() => setSelectedService(null)} />
+//       )}
 //     </div>
 //   );
 // }
@@ -909,6 +998,111 @@
 //   );
 // }
 
+// // ─── CHANGE 1: E-Preparation Routing Popup (10-second countdown for Java material only) ──
+// function EPrepRoutingPopup({ material, onClose }) {
+//   const [countdown, setCountdown] = useState(10);
+//   const [messages] = useState([
+//     "🎯 Preparing your personalised E-Preparation session...",
+//     "📊 Loading quiz modules and practice sets...",
+//     "🔄 Syncing your progress and bookmarks...",
+//     "✅ All set! Redirecting to E-Preparation platform...",
+//   ]);
+//   const [msgIndex, setMsgIndex] = useState(0);
+//   const eprepUrl = EPREP_LINKS[material.id] || "https://www.javatpoint.com/java-quiz";
+
+//   useEffect(() => {
+//     const msgInterval = setInterval(() => {
+//       setMsgIndex(p => Math.min(p + 1, messages.length - 1));
+//     }, 2500);
+//     const countInterval = setInterval(() => {
+//       setCountdown(p => {
+//         if (p <= 1) {
+//           clearInterval(countInterval);
+//           clearInterval(msgInterval);
+//           window.open(eprepUrl, "_blank");
+//           setTimeout(onClose, 300);
+//           return 0;
+//         }
+//         return p - 1;
+//       });
+//     }, 1000);
+//     return () => { clearInterval(msgInterval); clearInterval(countInterval); };
+//   }, []);
+
+//   const pct = ((10 - countdown) / 10) * 100;
+//   const cat = CATEGORIES[material.category];
+
+//   return (
+//     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.75)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:99000,backdropFilter:"blur(8px)",padding:20}}>
+//       <div style={{background:C.surface,borderRadius:24,maxWidth:480,width:"100%",boxShadow:C.shadowLg,overflow:"hidden",animation:"cardIn 0.4s cubic-bezier(.4,0,.2,1)"}}>
+//         {/* Top gradient bar */}
+//         <div style={{height:6,background:`linear-gradient(90deg,#1e40af,#6366f1,#8b5cf6)`,width:"100%"}}/>
+
+//         <div style={{padding:"32px 32px 28px",textAlign:"center"}}>
+//           {/* Animated icon */}
+//           <div style={{width:80,height:80,borderRadius:"50%",background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"3px solid #93c5fd",margin:"0 auto 20px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:36,animation:"orbPulse 2s ease-in-out infinite"}}>
+//             🎯
+//           </div>
+
+//           <div style={{fontSize:11,color:"#1e40af",fontWeight:800,letterSpacing:2,textTransform:"uppercase",marginBottom:8}}>Redirecting to</div>
+//           <h2 style={{margin:"0 0 6px",fontSize:20,fontWeight:900,color:C.textPri}}>E-Preparation Platform</h2>
+//           <p style={{margin:"0 0 24px",fontSize:13,color:C.textSec,fontWeight:600}}>{material.title}</p>
+
+//           {/* Message area */}
+//           <div style={{background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:14,padding:"16px 20px",marginBottom:24,minHeight:52,display:"flex",alignItems:"center",justifyContent:"center"}}>
+//             <p style={{margin:0,fontSize:13,color:"#1e40af",fontWeight:700,animation:"fadeUp 0.4s ease"}}>{messages[msgIndex]}</p>
+//           </div>
+
+//           {/* Sections shown */}
+//           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginBottom:24}}>
+//             {[
+//               {icon:"📝",label:"Mock Tests",val:"30 Qs"},
+//               {icon:"📊",label:"Analytics",val:"Real-time"},
+//               {icon:"🏆",label:"Leaderboard",val:"Live"},
+//             ].map((item,i)=>(
+//               <div key={i} style={{background:C.elevated,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 8px",animation:`cardIn 0.4s ease ${i*0.1+0.2}s both`}}>
+//                 <div style={{fontSize:20,marginBottom:4}}>{item.icon}</div>
+//                 <div style={{fontSize:11,fontWeight:800,color:C.textPri}}>{item.label}</div>
+//                 <div style={{fontSize:10,color:"#1e40af",fontWeight:700,marginTop:2}}>{item.val}</div>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* Countdown ring + bar */}
+//           <div style={{marginBottom:20}}>
+//             <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:12,marginBottom:10}}>
+//               <div style={{width:48,height:48,position:"relative",flexShrink:0}}>
+//                 <svg width={48} height={48} style={{transform:"rotate(-90deg)"}}>
+//                   <circle cx={24} cy={24} r={20} fill="none" stroke={C.border} strokeWidth={4}/>
+//                   <circle cx={24} cy={24} r={20} fill="none" stroke="#1e40af" strokeWidth={4}
+//                     strokeDasharray={125.6} strokeDashoffset={125.6 - (pct/100)*125.6}
+//                     style={{transition:"stroke-dashoffset 0.9s linear",strokeLinecap:"round"}}/>
+//                 </svg>
+//                 <div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize:14,fontWeight:900,color:"#1e40af"}}>{countdown}</div>
+//               </div>
+//               <div style={{textAlign:"left"}}>
+//                 <div style={{fontSize:13,fontWeight:800,color:C.textPri}}>Redirecting in {countdown}s</div>
+//                 <div style={{fontSize:11,color:C.textMut,fontWeight:600}}>Opens in new tab automatically</div>
+//               </div>
+//             </div>
+//             <div style={{height:8,background:C.border,borderRadius:8,overflow:"hidden"}}>
+//               <div style={{width:`${pct}%`,height:"100%",background:"linear-gradient(90deg,#3b82f6,#6366f1)",borderRadius:8,transition:"width 0.9s linear"}}/>
+//             </div>
+//           </div>
+
+//           <div style={{display:"flex",gap:10}}>
+//             <button onClick={onClose} style={{flex:1,background:C.elevated,color:C.textSec,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 0",cursor:"pointer",fontWeight:700,fontSize:13,fontFamily:"inherit"}}>✕ Cancel</button>
+//             <a href={eprepUrl} target="_blank" rel="noreferrer" onClick={onClose}
+//               style={{flex:2,background:"linear-gradient(135deg,#1e40af,#3b82f6)",color:"#fff",border:"none",borderRadius:12,padding:"12px 0",cursor:"pointer",fontWeight:800,fontSize:13,fontFamily:"inherit",textDecoration:"none",display:"flex",alignItems:"center",justifyContent:"center",gap:6,boxShadow:"0 4px 18px rgba(30,64,175,0.35)"}}>
+//               🚀 Go Now
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 // // ─── STUDENT DASHBOARD ────────────────────────────────────────────────────────
 // const CURRENT_STUDENT = { id: "s1", name: "Arjun Sharma" };
 
@@ -923,6 +1117,8 @@
 //   const [activeView, setActiveView]     = useState("library");
 //   const { toasts, add: toast }          = useToast();
 //   const [animIn, setAnimIn]             = useState(false);
+//   // CHANGE 1: e-prep routing popup state
+//   const [eprepPopup, setEprepPopup]     = useState(null);
 //   const completedCount = 3;
 
 //   useEffect(()=>{ setTimeout(()=>setAnimIn(true),80); },[]);
@@ -955,6 +1151,15 @@
 //     toast(`"${m.title}" download started!`,"success");
 //   };
 
+//   // CHANGE 1: E-Prep click handler — Java (id=1) shows routing popup, others open directly
+//   const handleEprepClick = (m, e) => {
+//     if (m.id === 1) {
+//       e.preventDefault();
+//       setEprepPopup(m);
+//     }
+//     // for other materials, let the <a href> work normally
+//   };
+
 //   const submitRequest = data=>{
 //     const newReq={id:`r${Date.now()}`,studentId:CURRENT_STUDENT.id,studentName:CURRENT_STUDENT.name,...data,status:"pending",date:new Date().toISOString().slice(0,10)};
 //     _globalRequests=[..._globalRequests,newReq];
@@ -975,6 +1180,8 @@
 //         @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
 //         @keyframes bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
 //         @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,0.3)}50%{box-shadow:0 0 0 8px rgba(245,158,11,0)}}
+//         @keyframes orbPulse{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:0.8;transform:scale(1.08)}}
+//         @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 //         .mat-card:hover{transform:translateY(-6px) scale(1.02)!important;box-shadow:0 20px 60px rgba(15,23,42,0.15)!important;}
 //         .mat-card{transition:all 0.25s cubic-bezier(.4,0,.2,1)!important;}
 //         .cat-card:hover{transform:translateY(-4px)!important;box-shadow:0 12px 40px rgba(15,23,42,0.12)!important;}
@@ -1099,6 +1306,7 @@
 //                 const cat=CATEGORIES[m.category];
 //                 const locked=m.type==="premium"&&completedCount<3;
 //                 const crash=CRASH_COURSES[m.id];
+//                 const isJava = m.id === 1; // CHANGE 1: Java material
 //                 return (
 //                   <div key={m.id} className="mat-card" style={{background:C.surface,borderRadius:18,border:`1.5px solid ${m.bookmarked?C.amber:C.border}`,overflow:"hidden",animation:`cardIn 0.45s ease ${i*0.05}s both`,boxShadow:C.shadow,position:"relative"}}>
 //                     <div style={{background:cat.gradient,padding:"28px 0 20px",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:8,position:"relative",minHeight:130}}>
@@ -1107,6 +1315,12 @@
 //                       {!locked&&m.type==="premium"&&<div style={{position:"absolute",top:10,left:10,background:cat.color,color:"#fff",fontSize:10,fontWeight:700,borderRadius:7,padding:"3px 9px"}}>✨ PREMIUM</div>}
 //                       {m.uploadType==="pdf"&&<div style={{position:"absolute",bottom:10,right:10,background:"#fef2f2",color:"#991b1b",border:"1px solid #fca5a5",fontSize:10,fontWeight:700,borderRadius:6,padding:"2px 8px"}}>📄 PDF</div>}
 //                       {m.uploadType==="link"&&<div style={{position:"absolute",bottom:10,right:10,background:"#eff6ff",color:"#1e40af",border:"1px solid #93c5fd",fontSize:10,fontWeight:700,borderRadius:6,padding:"2px 8px"}}>🔗 Link</div>}
+//                       {/* Higher Education India/Abroad badge */}
+//                       {m.category==="higher"&&m.indiaOrAbroad&&(
+//                         <div style={{position:"absolute",bottom:10,left:10,background:m.indiaOrAbroad==="India"?"#f0fdf4":m.indiaOrAbroad==="Abroad"?"#eff6ff":"#f5f3ff",color:m.indiaOrAbroad==="India"?"#166534":m.indiaOrAbroad==="Abroad"?"#1e40af":"#5b21b6",border:`1px solid ${m.indiaOrAbroad==="India"?"#86efac":m.indiaOrAbroad==="Abroad"?"#93c5fd":"#c4b5fd"}`,fontSize:10,fontWeight:700,borderRadius:6,padding:"2px 8px"}}>
+//                           {m.indiaOrAbroad==="India"?"🇮🇳 India":m.indiaOrAbroad==="Abroad"?"✈️ Abroad":"🌐 Both"}
+//                         </div>
+//                       )}
 //                       <button onClick={e=>{e.stopPropagation();toggleBookmark(m.id);}} style={{position:"absolute",top:10,right:10,background:m.bookmarked?"#fffbeb":"rgba(255,255,255,0.8)",border:`1px solid ${m.bookmarked?C.amber:C.border}`,borderRadius:8,padding:"5px 8px",cursor:"pointer",fontSize:14,backdropFilter:"blur(4px)"}}>
 //                         {m.bookmarked?"🔖":"🏷️"}
 //                       </button>
@@ -1135,11 +1349,22 @@
 //                       </div>
 //                       {!locked&&(
 //                         <div style={{display:"flex",gap:7}}>
-//                           <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#1e40af",textDecoration:"none",transition:"all 0.18s"}}
-//                           onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#dbeafe,#bfdbfe)";e.currentTarget.style.transform="translateY(-1px)";}}
-//                           onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg,#eff6ff,#dbeafe)";e.currentTarget.style.transform="translateY(0)";}}>
-//                             🎯 E-Prep
-//                           </a>
+//                           {/* CHANGE 1: Java gets popup, others get direct link */}
+//                           {isJava ? (
+//                             <button
+//                               onClick={()=>setEprepPopup(m)}
+//                               style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#1e40af",fontFamily:"inherit",transition:"all 0.18s"}}
+//                               onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#dbeafe,#bfdbfe)";e.currentTarget.style.transform="translateY(-1px)";}}
+//                               onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg,#eff6ff,#dbeafe)";e.currentTarget.style.transform="translateY(0)";}}>
+//                               🎯 E-Prep
+//                             </button>
+//                           ) : (
+//                             <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#1e40af",textDecoration:"none",transition:"all 0.18s"}}
+//                             onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#dbeafe,#bfdbfe)";e.currentTarget.style.transform="translateY(-1px)";}}
+//                             onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg,#eff6ff,#dbeafe)";e.currentTarget.style.transform="translateY(0)";}}>
+//                               🎯 E-Prep
+//                             </a>
+//                           )}
 //                           {crash&&(
 //                             <a href={crash.url} target="_blank" rel="noreferrer" style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#fff7ed,#ffedd5)",border:"1.5px solid #fdba74",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#c2410c",textDecoration:"none",transition:"all 0.18s"}}
 //                             onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#ffedd5,#fed7aa)";e.currentTarget.style.transform="translateY(-1px)";}}
@@ -1165,14 +1390,16 @@
 //         )}
 //       </div>
 
-//       {openMaterial&&<MaterialModal material={openMaterial} onClose={()=>setOpenMat(null)} toast={toast}/>}
+//       {openMaterial&&<MaterialModal material={openMaterial} onClose={()=>setOpenMat(null)} toast={toast} onEprepClick={m=>setEprepPopup(m)}/>}
 //       {showReqModal&&<RequestMaterialModal onClose={()=>setShowReqModal(false)} onSubmit={submitRequest}/>}
+//       {/* CHANGE 1: Routing popup */}
+//       {eprepPopup&&<EPrepRoutingPopup material={eprepPopup} onClose={()=>setEprepPopup(null)}/>}
 //     </div>
 //   );
 // }
 
 // // ─── MATERIAL MODAL ───────────────────────────────────────────────────────────
-// function MaterialModal({ material:m, onClose, toast }) {
+// function MaterialModal({ material:m, onClose, toast, onEprepClick }) {
 //   const [topics, setTopics] = useState(JAVA_TOPICS);
 //   const [activeTab, setActiveTab] = useState("topics");
 //   const cat = CATEGORIES[m.category];
@@ -1180,6 +1407,7 @@
 //   const pct  = Math.round((done/topics.length)*100);
 //   const crash = CRASH_COURSES[m.id];
 //   const allDone = done === topics.length;
+//   const isJava = m.id === 1;
 
 //   return (
 //     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.6)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:9000,padding:20,backdropFilter:"blur(4px)",animation:"fadeIn 0.2s ease"}}
@@ -1192,12 +1420,21 @@
 //             <div>
 //               <h2 style={{margin:"0 0 6px",color:cat.color,fontSize:20,fontWeight:800}}>{m.title}</h2>
 //               <div style={{fontSize:12,color:C.textSec,marginBottom:8}}>{m.sub} · {m.pages} pages · {m.topics} topics</div>
-//               <div style={{display:"flex",gap:8}}>
-//                 <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,background:"#1e40af",color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 14px rgba(30,64,175,0.35)",transition:"all 0.18s"}}
-//                   onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"}
-//                   onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
-//                   🎯 E-Preparation
-//                 </a>
+//               <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+//                 {/* CHANGE 1: Java e-prep button opens popup */}
+//                 {isJava ? (
+//                   <button onClick={()=>onEprepClick(m)} style={{display:"inline-flex",alignItems:"center",gap:5,background:"#1e40af",color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,border:"none",cursor:"pointer",fontFamily:"inherit",boxShadow:"0 4px 14px rgba(30,64,175,0.35)",transition:"all 0.18s"}}
+//                     onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"}
+//                     onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
+//                     🎯 E-Preparation
+//                   </button>
+//                 ) : (
+//                   <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,background:"#1e40af",color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 14px rgba(30,64,175,0.35)",transition:"all 0.18s"}}
+//                     onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"}
+//                     onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
+//                     🎯 E-Preparation
+//                   </a>
+//                 )}
 //                 {crash&&(
 //                   <a href={crash.url} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,background:crash.color,color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,textDecoration:"none",boxShadow:`0 4px 14px ${crash.color}44`,transition:"all 0.18s"}}
 //                     onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"}
@@ -1249,7 +1486,11 @@
 //               <p style={{color:C.textSec,marginBottom:28,fontSize:14}}>30 questions · 45 minutes · Results saved to profile</p>
 //               <div style={{display:"flex",gap:14,justifyContent:"center",flexWrap:"wrap"}}>
 //                 <button onClick={()=>{toast("Mock test started!","success");onClose();}} style={{background:cat.color,color:"#fff",border:"none",borderRadius:12,padding:"14px 32px",fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"inherit",boxShadow:`0 6px 24px ${cat.color}44`}}>🚀 Start Mock Test</button>
-//                 <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,background:"#1e40af",color:"#fff",borderRadius:12,padding:"14px 24px",fontSize:15,fontWeight:700,textDecoration:"none",boxShadow:"0 6px 24px rgba(30,64,175,0.3)"}}>🎯 E-Preparation Platform</a>
+//                 {isJava ? (
+//                   <button onClick={()=>onEprepClick(m)} style={{display:"inline-flex",alignItems:"center",gap:6,background:"#1e40af",color:"#fff",borderRadius:12,padding:"14px 24px",fontSize:15,fontWeight:700,border:"none",cursor:"pointer",fontFamily:"inherit",boxShadow:"0 6px 24px rgba(30,64,175,0.3)"}}>🎯 E-Preparation Platform</button>
+//                 ) : (
+//                   <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,background:"#1e40af",color:"#fff",borderRadius:12,padding:"14px 24px",fontSize:15,fontWeight:700,textDecoration:"none",boxShadow:"0 6px 24px rgba(30,64,175,0.3)"}}>🎯 E-Preparation Platform</a>
+//                 )}
 //               </div>
 //             </div>
 //           )}
@@ -1311,6 +1552,125 @@
 //   );
 // }
 
+// // ─── CHANGE 2: Student Analytics Dashboard (Admin) ────────────────────────────
+// function StudentAnalyticsDashboard({ materials, students }) {
+//   const [view, setView] = useState("college"); // "college" | "material"
+
+//   return (
+//     <div>
+//       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:22}}>
+//         <h1 style={{fontSize:22,fontWeight:900,margin:0}}>📊 Student Analytics</h1>
+//         <div style={{display:"flex",gap:8,background:C.elevated,borderRadius:10,padding:4,border:`1px solid ${C.border}`}}>
+//           {[["college","🏛️ By College"],["material","📚 By Material"]].map(([v,l])=>(
+//             <button key={v} onClick={()=>setView(v)} style={{padding:"8px 18px",borderRadius:8,border:"none",cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"inherit",background:view===v?"linear-gradient(135deg,#fffbeb,#fef3c7)":C.elevated,color:view===v?C.amberDim:C.textSec,transition:"all 0.18s"}}>{l}</button>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Summary Cards */}
+//       <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:14,marginBottom:28}}>
+//         {[
+//           {icon:"👥",label:"Total Readers",value:COLLEGE_READING_DATA.reduce((a,c)=>a+c.readers,0).toLocaleString(),color:"#3b82f6",bg:"#eff6ff"},
+//           {icon:"🏛️",label:"Colleges Active",value:COLLEGE_READING_DATA.length,color:"#10b981",bg:"#f0fdf4"},
+//           {icon:"📖",label:"Most Read",value:"UPSC History",color:"#f59e0b",bg:"#fffbeb",small:true},
+//           {icon:"📈",label:"Avg Read Rate",value:"74%",color:"#6366f1",bg:"#eff6ff"},
+//         ].map((s,i)=>(
+//           <div key={i} style={{background:C.surface,border:`1.5px solid ${s.color}33`,borderRadius:14,padding:"18px 20px",animation:`cardIn 0.4s ease ${i*0.07}s both`,transition:"all 0.2s"}}
+//             onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-3px)";e.currentTarget.style.boxShadow=C.shadowLg;}}
+//             onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}>
+//             <div style={{background:s.bg,borderRadius:10,padding:"7px 9px",fontSize:18,display:"inline-block",marginBottom:10}}>{s.icon}</div>
+//             <div style={{fontSize:s.small?14:22,fontWeight:900,color:s.color,lineHeight:1.2,marginBottom:3}}>{s.value}</div>
+//             <div style={{fontSize:11,color:C.textMut,fontWeight:600}}>{s.label}</div>
+//           </div>
+//         ))}
+//       </div>
+
+//       {view==="college" && (
+//         <div>
+//           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>🏛️ Readers by College</div>
+//           <div style={{display:"flex",flexDirection:"column",gap:12}}>
+//             {COLLEGE_READING_DATA.map((clg,i)=>{
+//               const maxR = COLLEGE_READING_DATA[0].readers;
+//               const pct = Math.round((clg.readers/maxR)*100);
+//               const medals = ["🥇","🥈","🥉"];
+//               return (
+//                 <div key={clg.college} style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:14,padding:"16px 20px",animation:`cardIn 0.35s ease ${i*0.06}s both`,boxShadow:C.shadow}}>
+//                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
+//                     <div style={{display:"flex",alignItems:"center",gap:12}}>
+//                       <span style={{fontSize:18,flexShrink:0}}>{medals[i]||`#${i+1}`}</span>
+//                       <div>
+//                         <div style={{fontWeight:800,fontSize:14,color:C.textPri}}>{clg.college}</div>
+//                         <div style={{fontSize:11,color:C.textMut,fontWeight:600,marginTop:2}}>📚 Reading: {clg.materials.slice(0,3).join(", ")}{clg.materials.length>3?` +${clg.materials.length-3} more`:""}</div>
+//                       </div>
+//                     </div>
+//                     <div style={{textAlign:"right",flexShrink:0}}>
+//                       <div style={{fontSize:18,fontWeight:900,color:C.amber}}>{clg.readers.toLocaleString()}</div>
+//                       <div style={{fontSize:10,color:C.textMut,fontWeight:600}}>active readers</div>
+//                     </div>
+//                   </div>
+//                   <div style={{height:8,background:C.border,borderRadius:8,overflow:"hidden"}}>
+//                     <div style={{width:`${pct}%`,height:"100%",background:`linear-gradient(90deg,${C.amber},${C.amberHi})`,borderRadius:8,transition:"width 1.2s ease"}}/>
+//                   </div>
+//                   <div style={{display:"flex",gap:8,marginTop:8,flexWrap:"wrap"}}>
+//                     {clg.materials.map(mat=>(
+//                       <span key={mat} style={{background:"#fffbeb",color:"#92400e",border:"1px solid #fde68a",borderRadius:6,padding:"2px 8px",fontSize:10,fontWeight:700}}>{mat}</span>
+//                     ))}
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+//       )}
+
+//       {view==="material" && (
+//         <div>
+//           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>📚 Most Viewed & Read Materials</div>
+//           <div style={{display:"flex",flexDirection:"column",gap:12}}>
+//             {MOST_VIEWED_MATERIALS.map((mat,i)=>{
+//               const cat = CATEGORIES[mat.category];
+//               const readPct = Math.round((mat.reads/mat.views)*100);
+//               const maxV = MOST_VIEWED_MATERIALS[0].views;
+//               const viewPct = Math.round((mat.views/maxV)*100);
+//               return (
+//                 <div key={mat.id} style={{background:C.surface,border:`1.5px solid ${cat.color}22`,borderRadius:14,padding:"18px 20px",animation:`cardIn 0.35s ease ${i*0.07}s both`,boxShadow:C.shadow}}>
+//                   <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:12}}>
+//                     <div style={{width:48,height:48,borderRadius:12,background:cat.bg,display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,flexShrink:0,border:`1px solid ${cat.border}`}}>{mat.emoji}</div>
+//                     <div style={{flex:1}}>
+//                       <div style={{fontWeight:800,fontSize:14,marginBottom:4}}>{mat.title}</div>
+//                       <div style={{display:"flex",gap:14,alignItems:"center",flexWrap:"wrap"}}>
+//                         <span style={{background:cat.bg,color:cat.color,borderRadius:6,padding:"2px 8px",fontSize:11,fontWeight:700,border:`1px solid ${cat.border}`}}>{cat.label}</span>
+//                         <span style={{fontSize:12,color:C.textSec,fontWeight:700}}>👁 {mat.views.toLocaleString()} views</span>
+//                         <span style={{fontSize:12,color:C.textSec,fontWeight:700}}>📖 {mat.reads.toLocaleString()} reads</span>
+//                         <span style={{fontSize:12,fontWeight:800,color:readPct>=70?"#166534":"#92400e",background:readPct>=70?"#f0fdf4":"#fffbeb",borderRadius:6,padding:"2px 8px"}}>{readPct}% read rate</span>
+//                       </div>
+//                     </div>
+//                     <div style={{background:cat.bg,color:cat.color,borderRadius:10,padding:"6px 14px",fontSize:13,fontWeight:900,border:`1px solid ${cat.border}`,flexShrink:0}}>#{i+1}</div>
+//                   </div>
+//                   <div>
+//                     <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:C.textMut,marginBottom:3}}>
+//                       <span>Views</span><span style={{fontWeight:700,color:cat.color}}>{viewPct}% of top</span>
+//                     </div>
+//                     <div style={{height:7,background:C.border,borderRadius:8,overflow:"hidden",marginBottom:6}}>
+//                       <div style={{width:`${viewPct}%`,height:"100%",background:`linear-gradient(90deg,${cat.color},${cat.color}88)`,borderRadius:8,transition:"width 1.2s ease"}}/>
+//                     </div>
+//                     <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:C.textMut,marginBottom:3}}>
+//                       <span>Reads</span><span style={{fontWeight:700,color:"#166534"}}>{readPct}% of viewers read it</span>
+//                     </div>
+//                     <div style={{height:7,background:C.border,borderRadius:8,overflow:"hidden"}}>
+//                       <div style={{width:`${readPct}%`,height:"100%",background:"linear-gradient(90deg,#10b981,#34d399)",borderRadius:8,transition:"width 1.2s ease 0.3s"}}/>
+//                     </div>
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
 // // ─── ADMIN DASHBOARD ──────────────────────────────────────────────────────────
 // function AdminDashboard({ onBack }) {
 //   const [materials, setMaterials] = useState(()=>_globalMaterials.map(m=>({...m})));
@@ -1353,7 +1713,7 @@
 //   };
 
 //   const approveRequest=(req,studentOnly)=>{
-//     const newM={id:Date.now(),title:req.title,category:req.category,sub:req.sub,type:"free",emoji:"📄",topics:5,progress:0,pages:100,downloads:0,bookmarked:false,studentId:studentOnly?req.studentId:null,uploadType:null,fileLink:""};
+//     const newM={id:Date.now(),title:req.title,category:req.category,sub:req.sub,type:"free",emoji:"📄",topics:5,progress:0,pages:100,downloads:0,bookmarked:false,studentId:studentOnly?req.studentId:null,uploadType:null,fileLink:"",indiaOrAbroad:null};
 //     const updatedM=[...materials,newM];setMaterials(updatedM);_globalMaterials=updatedM;
 //     const updatedR=_globalRequests.map(r=>r.id===req.id?{...r,status:"approved"}:r);
 //     _globalRequests=updatedR;setRequests([...updatedR]);
@@ -1376,10 +1736,13 @@
 //     students:students.length,pending:pendingReqs.length,
 //   };
 
+//   // CHANGE 2: Added student-analytics tab
 //   const TABS=[
 //     {id:"overview",label:"📊 Overview"},{id:"materials",label:"📚 Materials"},
 //     {id:"requests",label:`📨 Requests ${stats.pending>0?`(${stats.pending})`:""}`},
-//     {id:"students",label:"👥 Students"},{id:"categories",label:"🏷️ Categories"},
+//     {id:"students",label:"👥 Students"},
+//     {id:"student-analytics",label:"📈 Student Analytics"},
+//     {id:"categories",label:"🏷️ Categories"},
 //   ];
 
 //   return (
@@ -1393,14 +1756,14 @@
 //       `}</style>
 //       <ToastContainer toasts={toasts}/>
 
-//       <div style={{position:"fixed",left:0,top:0,bottom:0,width:220,background:C.surface,borderRight:`1px solid ${C.border}`,display:"flex",flexDirection:"column",zIndex:100,boxShadow:"2px 0 12px rgba(15,23,42,0.06)"}}>
+//       <div style={{position:"fixed",left:0,top:0,bottom:0,width:232,background:C.surface,borderRight:`1px solid ${C.border}`,display:"flex",flexDirection:"column",zIndex:100,boxShadow:"2px 0 12px rgba(15,23,42,0.06)"}}>
 //         <div style={{padding:"24px 20px",borderBottom:`1px solid ${C.border}`}}>
 //           <div style={{fontSize:11,color:C.textMut,fontWeight:800,marginBottom:4,letterSpacing:1.5,textTransform:"uppercase"}}>OYS E-LIBRARY</div>
 //           <div style={{fontSize:18,fontWeight:900,color:C.amber}}>Admin Panel</div>
 //         </div>
-//         <nav style={{padding:"16px 12px",flex:1}}>
+//         <nav style={{padding:"16px 12px",flex:1,overflowY:"auto"}}>
 //           {TABS.map(t=>(
-//             <button key={t.id} onClick={()=>setActiveTab(t.id)} style={{width:"100%",textAlign:"left",padding:"12px 14px",borderRadius:10,border:"none",cursor:"pointer",marginBottom:4,
+//             <button key={t.id} onClick={()=>setActiveTab(t.id)} style={{width:"100%",textAlign:"left",padding:"11px 14px",borderRadius:10,border:"none",cursor:"pointer",marginBottom:4,
 //               background:activeTab===t.id?"linear-gradient(135deg,#fffbeb,#fef3c7)":"transparent",
 //               color:activeTab===t.id?C.amberDim:C.textSec,fontWeight:activeTab===t.id?800:600,fontSize:13,
 //               transition:"all 0.18s",borderLeft:`3px solid ${activeTab===t.id?C.amber:"transparent"}`,fontFamily:"inherit"}}>
@@ -1413,7 +1776,7 @@
 //         </div>
 //       </div>
 
-//       <div style={{marginLeft:220,padding:"28px 32px",opacity:animIn?1:0,transition:"opacity 0.5s ease"}}>
+//       <div style={{marginLeft:232,padding:"28px 32px",opacity:animIn?1:0,transition:"opacity 0.5s ease"}}>
 
 //         {activeTab==="overview"&&(
 //           <div>
@@ -1511,7 +1874,11 @@
 //                             <MatThumb m={m} size={40}/>
 //                             <div>
 //                               <div style={{fontWeight:700,fontSize:13}}>{m.title}</div>
-//                               <div style={{fontSize:11,color:C.textMut}}>{m.pages}p</div>
+//                               <div style={{fontSize:11,color:C.textMut}}>{m.pages}p
+//                                 {m.category==="higher"&&m.indiaOrAbroad&&(
+//                                   <span style={{marginLeft:6,background:m.indiaOrAbroad==="India"?"#f0fdf4":m.indiaOrAbroad==="Abroad"?"#eff6ff":"#f5f3ff",color:m.indiaOrAbroad==="India"?"#166534":m.indiaOrAbroad==="Abroad"?"#1e40af":"#5b21b6",borderRadius:4,padding:"1px 6px",fontSize:9,fontWeight:700}}>{m.indiaOrAbroad==="India"?"🇮🇳":m.indiaOrAbroad==="Abroad"?"✈️":"🌐"} {m.indiaOrAbroad}</span>
+//                                 )}
+//                               </div>
 //                             </div>
 //                           </div>
 //                         </td>
@@ -1603,6 +1970,7 @@
 //                       <div>
 //                         <div style={{fontWeight:800,fontSize:15}}>{s.name}</div>
 //                         <div style={{fontSize:12,color:C.textSec}}>{s.email}</div>
+//                         {s.college&&<div style={{fontSize:11,color:C.textMut,marginTop:2}}>🏛️ {s.college}</div>}
 //                       </div>
 //                     </div>
 //                     <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10}}>
@@ -1627,6 +1995,11 @@
 //           <StudentDetail student={selectedStudent} materials={materials} requests={requests} onBack={()=>setSelStu(null)} onApprove={approveRequest} onReject={rejectRequest} toast={toast}/>
 //         )}
 
+//         {/* CHANGE 2: Student Analytics Tab */}
+//         {activeTab==="student-analytics"&&(
+//           <StudentAnalyticsDashboard materials={materials} students={students}/>
+//         )}
+
 //         {activeTab==="categories"&&(
 //           <div>
 //             <h1 style={{fontSize:22,fontWeight:900,marginBottom:22}}>Category Management</h1>
@@ -1643,8 +2016,51 @@
 //                   <div style={{padding:18}}>
 //                     <div style={{fontSize:11,color:C.textMut,fontWeight:800,marginBottom:10,textTransform:"uppercase",letterSpacing:0.5}}>Sub-categories</div>
 //                     <div style={{display:"flex",flexWrap:"wrap",gap:7,marginBottom:14}}>
-//                       {CATEGORY_SUBS[key].map(s=><span key={s} style={{background:C.elevated,color:C.textSec,borderRadius:7,padding:"5px 11px",fontSize:12,border:`1px solid ${C.border}`,fontWeight:600}}>{s}</span>)}
+//                       {CATEGORY_SUBS[key].map(s=>(
+//                         <div key={s} style={{position:"relative"}}>
+//                           <span style={{background:C.elevated,color:C.textSec,borderRadius:7,padding:"5px 11px",fontSize:12,border:`1px solid ${C.border}`,fontWeight:600,display:"inline-flex",alignItems:"center",gap:5}}>
+//                             {s}
+//                             {/* CHANGE 2: Higher Education gets India/Abroad indicator */}
+//                             {key==="higher"&&(
+//                               <span style={{
+//                                 background: HIGHER_INDIA_ABROAD[s]==="India"?"#f0fdf4":HIGHER_INDIA_ABROAD[s]==="Abroad"?"#eff6ff":"#f5f3ff",
+//                                 color: HIGHER_INDIA_ABROAD[s]==="India"?"#166534":HIGHER_INDIA_ABROAD[s]==="Abroad"?"#1e40af":"#5b21b6",
+//                                 borderRadius:4,padding:"1px 5px",fontSize:9,fontWeight:800,
+//                               }}>
+//                                 {HIGHER_INDIA_ABROAD[s]==="India"?"🇮🇳 IN":HIGHER_INDIA_ABROAD[s]==="Abroad"?"✈️ Abroad":"🌐 Both"}
+//                               </span>
+//                             )}
+//                           </span>
+//                         </div>
+//                       ))}
 //                     </div>
+//                     {/* CHANGE 2: Higher Education India/Abroad dropdowns */}
+//                     {key==="higher"&&(
+//                       <div style={{marginBottom:14,background:"linear-gradient(135deg,#ede9fe,#ddd6fe)",border:"1px solid #c4b5fd",borderRadius:10,padding:"12px 14px"}}>
+//                         <div style={{fontSize:11,color:"#5b21b6",fontWeight:800,marginBottom:8,textTransform:"uppercase",letterSpacing:0.5}}>🌍 Filter by Destination</div>
+//                         <div style={{display:"flex",gap:8}}>
+//                           <div style={{flex:1}}>
+//                             <label style={{fontSize:10,color:"#5b21b6",fontWeight:700,display:"block",marginBottom:4}}>Category</label>
+//                             <select style={{width:"100%",padding:"7px 10px",borderRadius:8,border:"1.5px solid #c4b5fd",background:"rgba(255,255,255,0.8)",color:"#5b21b6",fontSize:12,cursor:"pointer",fontFamily:"inherit",fontWeight:600}}>
+//                               <option value="">All</option>
+//                               <option value="India">🇮🇳 India</option>
+//                               <option value="Abroad">✈️ Abroad</option>
+//                               <option value="Both">🌐 Both</option>
+//                             </select>
+//                           </div>
+//                           <div style={{flex:1}}>
+//                             <label style={{fontSize:10,color:"#5b21b6",fontWeight:700,display:"block",marginBottom:4}}>Study Type</label>
+//                             <select style={{width:"100%",padding:"7px 10px",borderRadius:8,border:"1.5px solid #c4b5fd",background:"rgba(255,255,255,0.8)",color:"#5b21b6",fontSize:12,cursor:"pointer",fontFamily:"inherit",fontWeight:600}}>
+//                               <option value="">All Types</option>
+//                               <option value="Masters">Masters</option>
+//                               <option value="PhD">PhD</option>
+//                               <option value="Undergraduate">Undergraduate</option>
+//                               <option value="Certificate">Certificate</option>
+//                             </select>
+//                           </div>
+//                         </div>
+//                       </div>
+//                     )}
 //                     <button className="btn-sm" style={{width:"100%",background:cat.gradient,color:cat.color,border:`1.5px solid ${cat.border}`,borderRadius:9,padding:"9px 0",cursor:"pointer",fontWeight:700,fontSize:12,fontFamily:"inherit"}}>+ Add Sub-category</button>
 //                   </div>
 //                 </div>
@@ -1684,6 +2100,7 @@
 //         <div>
 //           <h2 style={{margin:0,fontSize:20,fontWeight:900}}>{s.name}</h2>
 //           <div style={{color:C.textSec,fontSize:13,fontWeight:600}}>{s.email} · Joined {s.joined}</div>
+//           {s.college&&<div style={{fontSize:12,color:C.textMut,marginTop:3}}>🏛️ {s.college}</div>}
 //         </div>
 //         <div style={{marginLeft:"auto",display:"flex",gap:14}}>
 //           {[["✅",s.completed,"Completed"],["📚",stuMats.length,"Personal"],["📨",stuReqs.length,"Requests"]].map(([icon,val,lbl])=>(
@@ -1734,10 +2151,13 @@
 //   const [form, setForm] = useState({
 //     title:item?.title||"",category:item?.category||"private",sub:item?.sub||"IT",
 //     type:item?.type||"free",pages:item?.pages||"",topics:item?.topics||"",
-//     emoji:item?.emoji||"📄",uploadType:item?.uploadType||"",fileLink:item?.fileLink||"",studentId:item?.studentId||"",
+//     emoji:item?.emoji||"📄",uploadType:item?.uploadType||"",fileLink:item?.fileLink||"",
+//     studentId:item?.studentId||"",
+//     indiaOrAbroad:item?.indiaOrAbroad||"",  // CHANGE 2: new field
 //   });
 //   const set=(k,v)=>setForm(p=>({...p,[k]:v}));
 //   const EMOJIS=["📄","☕","🐍","🌲","📊","🏦","🏧","📜","📐","🔬","🔤","💼","🌾","⚔️","🚂","📝","🔷","🎯","🧮","🔐"];
+//   const isHigher = form.category === "higher";
 //   return (
 //     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.65)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:9000,padding:20,backdropFilter:"blur(4px)"}}>
 //       <div style={{background:C.surface,borderRadius:22,maxWidth:560,width:"100%",boxShadow:C.shadowLg,maxHeight:"92vh",overflow:"auto",animation:"cardIn 0.3s ease"}}>
@@ -1756,7 +2176,7 @@
 //             {[["Category","category",Object.entries(CATEGORIES).map(([k,v])=>[k,v.label])],["Type","type",[["free","Free"],["premium","Premium"]]]].map(([label,key,opts])=>(
 //               <div key={key}>
 //                 <label style={{fontSize:11,fontWeight:800,color:C.textSec,display:"block",marginBottom:5,textTransform:"uppercase",letterSpacing:0.8}}>{label}</label>
-//                 <select value={form[key]} onChange={e=>{set(key,e.target.value);if(key==="category")set("sub",CATEGORY_SUBS[e.target.value][0]);}} style={{width:"100%",padding:"10px 12px",borderRadius:10,border:`1.5px solid ${C.border}`,background:C.elevated,color:C.textPri,fontSize:13,cursor:"pointer",fontFamily:"inherit"}}>
+//                 <select value={form[key]} onChange={e=>{set(key,e.target.value);if(key==="category"){set("sub",CATEGORY_SUBS[e.target.value][0]);set("indiaOrAbroad","");}}} style={{width:"100%",padding:"10px 12px",borderRadius:10,border:`1.5px solid ${C.border}`,background:C.elevated,color:C.textPri,fontSize:13,cursor:"pointer",fontFamily:"inherit"}}>
 //                   {opts.map(([v,l])=><option key={v} value={v}>{l}</option>)}
 //                 </select>
 //               </div>
@@ -1768,6 +2188,33 @@
 //               {CATEGORY_SUBS[form.category].map(s=><option key={s} value={s}>{s}</option>)}
 //             </select>
 //           </div>
+//           {/* CHANGE 2: India/Abroad dropdowns for Higher Education */}
+//           {isHigher&&(
+//             <div style={{background:"linear-gradient(135deg,#ede9fe,#ddd6fe)",border:"1.5px solid #c4b5fd",borderRadius:12,padding:"14px 16px"}}>
+//               <div style={{fontSize:11,color:"#5b21b6",fontWeight:800,marginBottom:10,textTransform:"uppercase",letterSpacing:0.5}}>🌍 Higher Education Destination</div>
+//               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+//                 <div>
+//                   <label style={{fontSize:10,color:"#5b21b6",fontWeight:700,display:"block",marginBottom:5}}>India or Abroad?</label>
+//                   <select value={form.indiaOrAbroad} onChange={e=>set("indiaOrAbroad",e.target.value)} style={{width:"100%",padding:"9px 11px",borderRadius:8,border:"1.5px solid #c4b5fd",background:"rgba(255,255,255,0.85)",color:"#5b21b6",fontSize:12,cursor:"pointer",fontFamily:"inherit",fontWeight:600}}>
+//                     <option value="">Select</option>
+//                     <option value="India">🇮🇳 India</option>
+//                     <option value="Abroad">✈️ Abroad</option>
+//                     <option value="Both">🌐 Both</option>
+//                   </select>
+//                 </div>
+//                 <div>
+//                   <label style={{fontSize:10,color:"#5b21b6",fontWeight:700,display:"block",marginBottom:5}}>Study Type</label>
+//                   <select style={{width:"100%",padding:"9px 11px",borderRadius:8,border:"1.5px solid #c4b5fd",background:"rgba(255,255,255,0.85)",color:"#5b21b6",fontSize:12,cursor:"pointer",fontFamily:"inherit",fontWeight:600}}>
+//                     <option value="">All Types</option>
+//                     <option value="Masters">Masters</option>
+//                     <option value="PhD">PhD</option>
+//                     <option value="Undergraduate">Undergraduate</option>
+//                     <option value="Certificate">Certificate</option>
+//                   </select>
+//                 </div>
+//               </div>
+//             </div>
+//           )}
 //           <div>
 //             <label style={{fontSize:11,fontWeight:800,color:C.textSec,display:"block",marginBottom:8,textTransform:"uppercase",letterSpacing:0.8}}>Content Type</label>
 //             <div style={{display:"flex",gap:8,marginBottom:form.uploadType?10:0}}>
@@ -1815,7 +2262,15 @@
 //         </div>
 //         <div style={{padding:24}}>
 //           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:16}}>
-//             {[["Category",cat.label],["Type",m.type],["Downloads",m.downloads.toLocaleString()],["Progress",`${m.progress}%`],["Upload",m.uploadType||"None"],["Assigned To",stu?.name||"All Students"]].map(([k,v])=>(
+//             {[
+//               ["Category",cat.label],
+//               ["Type",m.type],
+//               ["Downloads",m.downloads.toLocaleString()],
+//               ["Progress",`${m.progress}%`],
+//               ["Upload",m.uploadType||"None"],
+//               ["Assigned To",stu?.name||"All Students"],
+//               ...(m.category==="higher"&&m.indiaOrAbroad?[["Destination",m.indiaOrAbroad==="India"?"🇮🇳 India":m.indiaOrAbroad==="Abroad"?"✈️ Abroad":"🌐 Both"]]:[]),
+//             ].map(([k,v])=>(
 //               <div key={k} style={{background:C.elevated,borderRadius:10,padding:"11px 14px",border:`1px solid ${C.border}`}}>
 //                 <div style={{fontSize:10,color:C.textMut,fontWeight:800,textTransform:"uppercase",marginBottom:3}}>{k}</div>
 //                 <div style={{fontSize:14,fontWeight:700}}>{v}</div>
@@ -1857,7 +2312,6 @@
 //         @keyframes float2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(3deg)}}
 //       `}</style>
 
-//       {/* BLOBS */}
 //       <div style={{position:"absolute",width:500,height:500,borderRadius:"50%",background:"radial-gradient(circle,rgba(245,158,11,0.15) 0%,transparent 70%)",top:"-10%",left:"-5%",animation:"orbPulse 6s ease-in-out infinite"}}/>
 //       <div style={{position:"absolute",width:400,height:400,borderRadius:"50%",background:"radial-gradient(circle,rgba(99,102,241,0.12) 0%,transparent 70%)",bottom:"0%",right:"-5%",animation:"orbPulse 6s ease-in-out infinite 2s"}}/>
 //       <div style={{position:"absolute",width:300,height:300,borderRadius:"50%",background:"radial-gradient(circle,rgba(16,185,129,0.10) 0%,transparent 70%)",top:"40%",right:"15%",animation:"orbPulse 8s ease-in-out infinite 1s"}}/>
@@ -1899,7 +2353,6 @@
 //           </button>
 //         </div>
 
-//         {/* Feature chips */}
 //         <div style={{display:"flex",gap:20,justifyContent:"center",marginTop:44,flexWrap:"wrap",animation:"fadeUp 0.7s ease 0.65s both"}}>
 //           {[
 //             {icon:"📄",label:"Resume Maker"},
@@ -2184,7 +2637,6 @@ const CATEGORY_SUBS = {
   higher: ["GATE", "CAT/MBA", "GRE/GMAT", "Study Abroad", "Research", "PhD"],
 };
 
-// ─── CHANGE 2: Higher Education now has India/Abroad sub-options ────────────────
 const HIGHER_INDIA_ABROAD = {
   "GATE": "India",
   "CAT/MBA": "India",
@@ -2240,7 +2692,6 @@ let _globalRequests = [
 let _globalMaterials = ALL_MATERIALS.map(m => ({ ...m }));
 let _globalStudents  = INIT_STUDENTS.map(s => ({ ...s }));
 
-// ─── STUDENT MATERIAL READ TRACKING (for analytics) ───────────────────────────
 const COLLEGE_READING_DATA = [
   { college: "JNTU Hyderabad",           readers: 1240, materials: ["Java Programming","Python for Beginners","DSA","UPSC History Notes","SSC Mathematics"] },
   { college: "Osmania University",        readers: 980,  materials: ["Banking Fundamentals","IBPS PO Guide","CAT Verbal Ability","Research Methodology"] },
@@ -2378,7 +2829,6 @@ function PieChart({ services, onClose }) {
           </div>
           <button onClick={onClose} style={{background:"rgba(255,255,255,0.8)",border:`1px solid ${C.border}`,borderRadius:10,padding:"7px 13px",cursor:"pointer",fontSize:14,color:C.textSec,fontFamily:"inherit",fontWeight:700}}>✕ Close</button>
         </div>
-
         <div style={{padding:"28px 32px",display:"flex",gap:32,alignItems:"flex-start",flexWrap:"wrap"}}>
           <div style={{position:"relative",flexShrink:0}}>
             <svg width={size} height={size} style={{filter:"drop-shadow(0 8px 24px rgba(59,130,246,0.15))"}}>
@@ -2416,13 +2866,7 @@ function PieChart({ services, onClose }) {
                 </>
               )}
             </svg>
-            {hov && (
-              <div style={{position:"absolute",bottom:-18,left:"50%",transform:"translateX(-50%)",background:hov.color,color:"#fff",borderRadius:10,padding:"7px 16px",fontSize:12,fontWeight:700,whiteSpace:"nowrap",boxShadow:`0 4px 14px ${hov.color}44`,animation:"fadeUp 0.15s ease"}}>
-                {hov.icon} {hov.name} · {hov.pct}% · {hov.users.toLocaleString()} users
-              </div>
-            )}
           </div>
-
           <div style={{flex:1,minWidth:280}}>
             <div style={{fontSize:12,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>Service Breakdown</div>
             <div style={{display:"flex",flexDirection:"column",gap:8}}>
@@ -2455,7 +2899,49 @@ function PieChart({ services, onClose }) {
   );
 }
 
-// ─── CHANGE 3: E-Library Detail Modal for Overall Dashboard (full analytics, no approval) ──────
+// ─── ADDING SOON POPUP (replaces reject) ─────────────────────────────────────
+function AddingSoonPopup({ request, onConfirm, onClose }) {
+  return (
+    <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.6)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:99500,backdropFilter:"blur(6px)",padding:20}}>
+      <div style={{background:C.surface,borderRadius:24,maxWidth:460,width:"100%",boxShadow:C.shadowLg,overflow:"hidden",animation:"cardIn 0.35s cubic-bezier(.4,0,.2,1)"}}>
+        <div style={{height:5,background:"linear-gradient(90deg,#3b82f6,#6366f1,#8b5cf6)"}}/>
+        <div style={{padding:"32px 32px 28px",textAlign:"center"}}>
+          <div style={{width:72,height:72,borderRadius:"50%",background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"3px solid #93c5fd",margin:"0 auto 18px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:32,animation:"orbPulse 2s ease-in-out infinite"}}>
+            📅
+          </div>
+          <div style={{fontSize:11,color:"#1e40af",fontWeight:800,letterSpacing:2,textTransform:"uppercase",marginBottom:8}}>Material Status Update</div>
+          <h2 style={{margin:"0 0 10px",fontSize:19,fontWeight:900,color:C.textPri}}>Notify Student</h2>
+          <div style={{background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:14,padding:"16px 20px",marginBottom:20,textAlign:"left"}}>
+            <div style={{fontSize:12,color:"#1e40af",fontWeight:700,marginBottom:6}}>📨 Notification to be sent:</div>
+            <p style={{margin:0,fontSize:13,color:"#1e3a8a",fontWeight:600,lineHeight:1.6}}>
+              "Hi <strong>{request.studentName}</strong>, your requested material <strong>"{request.title}"</strong> is currently being prepared and will be added to the library soon. Stay tuned! 🎉"
+            </p>
+          </div>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:20}}>
+            {[
+              {icon:"👤",label:"Student",val:request.studentName},
+              {icon:"📚",label:"Material",val:request.title,small:true},
+            ].map((item,i)=>(
+              <div key={i} style={{background:C.elevated,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 14px",textAlign:"left"}}>
+                <div style={{fontSize:18,marginBottom:4}}>{item.icon}</div>
+                <div style={{fontSize:item.small?11:12,fontWeight:700,color:C.textPri,lineHeight:1.3}}>{item.val}</div>
+                <div style={{fontSize:10,color:C.textMut,fontWeight:600,marginTop:2}}>{item.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{display:"flex",gap:10}}>
+            <button onClick={onClose} style={{flex:1,background:C.elevated,color:C.textSec,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 0",cursor:"pointer",fontWeight:700,fontSize:13,fontFamily:"inherit"}}>Cancel</button>
+            <button onClick={onConfirm} style={{flex:2,background:"linear-gradient(135deg,#3b82f6,#6366f1)",color:"#fff",border:"none",borderRadius:12,padding:"12px 0",cursor:"pointer",fontWeight:800,fontSize:13,fontFamily:"inherit",boxShadow:"0 4px 18px rgba(59,130,246,0.35)",display:"flex",alignItems:"center",justifyContent:"center",gap:6}}>
+              📅 Send Notification
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── E-Library Detail Modal ───────────────────────────────────────────────────
 function ELibraryDetailModal({ service: s, onClose }) {
   const [animIn, setAnimIn] = useState(false);
   useEffect(() => { setTimeout(() => setAnimIn(true), 40); }, []);
@@ -2463,7 +2949,6 @@ function ELibraryDetailModal({ service: s, onClose }) {
   return (
     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.55)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:9500,backdropFilter:"blur(6px)",padding:20}} onClick={e=>e.target===e.currentTarget&&onClose()}>
       <div style={{background:C.surface,borderRadius:24,maxWidth:780,width:"100%",maxHeight:"92vh",overflow:"auto",boxShadow:C.shadowLg,opacity:animIn?1:0,transform:animIn?"translateY(0)":"translateY(20px)",transition:"all 0.35s ease"}}>
-        {/* Hero */}
         <div style={{background:s.gradient,padding:"28px 28px 22px",borderBottom:`1px solid ${s.border}`,borderRadius:"24px 24px 0 0",position:"relative",overflow:"hidden"}}>
           <div style={{position:"absolute",top:-30,right:-30,width:120,height:120,borderRadius:"50%",background:`radial-gradient(circle,${s.color}22,transparent)`,animation:"orbPulse 4s ease-in-out infinite"}}/>
           <button onClick={onClose} style={{position:"absolute",top:14,right:14,background:"rgba(255,255,255,0.85)",border:`1px solid ${s.border}`,borderRadius:10,padding:"6px 11px",cursor:"pointer",fontSize:13,color:C.textSec,fontFamily:"inherit",fontWeight:700,backdropFilter:"blur(4px)"}}>✕ Close</button>
@@ -2483,9 +2968,7 @@ function ELibraryDetailModal({ service: s, onClose }) {
             <span style={{fontSize:13,fontWeight:900,color:s.color}}>{s.topCollege}</span>
           </div>
         </div>
-
         <div style={{padding:"24px 26px"}}>
-          {/* Key Metrics */}
           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>📊 Key Metrics</div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:12,marginBottom:26}}>
             {[
@@ -2494,7 +2977,7 @@ function ELibraryDetailModal({ service: s, onClose }) {
               {icon:"📨",label:"Total Requests",value:s.stats.requests,color:"#92400e",bg:"#fffbeb"},
               {icon:"✅",label:"Approved",value:s.stats.approved,color:"#166534",bg:"#f0fdf4"},
               {icon:"⏳",label:"Pending",value:s.stats.pending,color:"#d97706",bg:"#fffbeb"},
-              {icon:"❌",label:"Rejected",value:s.stats.rejected,color:"#991b1b",bg:"#fef2f2"},
+              {icon:"📅",label:"Adding Soon",value:s.stats.rejected,color:"#1e40af",bg:"#eff6ff"},
             ].map((item,i)=>(
               <div key={i} style={{background:item.bg,border:`1.5px solid ${item.color}33`,borderRadius:14,padding:"16px 18px",animation:`cardIn 0.35s ease ${i*0.06}s both`}}>
                 <div style={{fontSize:20,marginBottom:6}}>{item.icon}</div>
@@ -2503,8 +2986,6 @@ function ELibraryDetailModal({ service: s, onClose }) {
               </div>
             ))}
           </div>
-
-          {/* College-wise Downloads */}
           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>🏛️ College-wise Downloads & Users</div>
           <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:26}}>
             {s.stats.collegeStats.map((clg, i) => {
@@ -2529,16 +3010,10 @@ function ELibraryDetailModal({ service: s, onClose }) {
                   <div style={{height:8,background:C.border,borderRadius:8,overflow:"hidden"}}>
                     <div style={{width:`${pct}%`,height:"100%",background:`linear-gradient(90deg,${s.color},${s.color}77)`,borderRadius:8,transition:"width 1.2s ease"}}/>
                   </div>
-                  <div style={{display:"flex",justifyContent:"space-between",marginTop:4}}>
-                    <span style={{fontSize:10,color:C.textMut,fontWeight:600}}>{pct}% of top</span>
-                    <span style={{fontSize:10,color:s.color,fontWeight:700}}>{clg.downloads.toLocaleString()} total</span>
-                  </div>
                 </div>
               );
             })}
           </div>
-
-          {/* Most Viewed Materials */}
           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>📖 Most Viewed Materials</div>
           <div style={{display:"flex",flexDirection:"column",gap:8}}>
             {MOST_VIEWED_MATERIALS.map((mat,i)=>{
@@ -2571,15 +3046,13 @@ function ELibraryDetailModal({ service: s, onClose }) {
   );
 }
 
-// ─── SERVICE DETAIL MODAL (generic, for non-elibrary services) ──────────────────
+// ─── SERVICE DETAIL MODAL ──────────────────────────────────────────────────────
 function ServiceDetailModal({ service: s, onClose }) {
   const [animIn, setAnimIn] = useState(false);
   useEffect(() => { setTimeout(() => setAnimIn(true), 40); }, []);
-
   const statEntries = Object.entries(s.stats).filter(([k]) => !["collegeStats","topCollege"].includes(k));
-
   const statLabels = {
-    materials:"Materials",downloads:"Total Downloads",requests:"Requests",pending:"Pending",approved:"Approved",rejected:"Rejected",
+    materials:"Materials",downloads:"Total Downloads",requests:"Requests",pending:"Pending",approved:"Approved",rejected:"Adding Soon",
     created:"Created",downloaded:"Downloaded",templates:"Templates",avgScore:"Avg Score",
     sent:"Alerts Sent",read:"Read",active:"Active Users",categories:"Categories",
     events:"Events",reminders:"Reminders",synced:"Synced",upcoming:"Upcoming",
@@ -2588,9 +3061,8 @@ function ServiceDetailModal({ service: s, onClose }) {
     sessions:"Sessions",mentors:"Mentors",avgRating:"Avg Rating",placed:"Placed",
     contests:"Contests",participants:"Participants",problems:"Problems",winners:"Winners",
   };
-
   const statIcons = {
-    materials:"📚",downloads:"⬇️",requests:"📨",pending:"⏳",approved:"✅",rejected:"❌",
+    materials:"📚",downloads:"⬇️",requests:"📨",pending:"⏳",approved:"✅",rejected:"📅",
     created:"📄",downloaded:"⬇️",templates:"🎨",avgScore:"🎯",
     sent:"📤",read:"👁",active:"👥",categories:"🏷️",
     events:"📅",reminders:"🔔",synced:"🔄",upcoming:"📆",
@@ -2599,13 +3071,11 @@ function ServiceDetailModal({ service: s, onClose }) {
     sessions:"💬",mentors:"🧑‍🏫",avgRating:"⭐",placed:"💼",
     contests:"🏆",participants:"👥",problems:"🧩",winners:"🥇",
   };
-
   return (
     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.55)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:9500,backdropFilter:"blur(6px)",padding:20}} onClick={e=>e.target===e.currentTarget&&onClose()}>
       <div style={{background:C.surface,borderRadius:24,maxWidth:640,width:"100%",maxHeight:"90vh",overflow:"auto",boxShadow:C.shadowLg,animation:"cardIn 0.35s ease",opacity:animIn?1:0,transform:animIn?"translateY(0)":"translateY(20px)",transition:"all 0.35s ease"}}>
         <div style={{background:s.gradient,padding:"28px 28px 22px",borderBottom:`1px solid ${s.border}`,borderRadius:"24px 24px 0 0",position:"relative",overflow:"hidden"}}>
-          <div style={{position:"absolute",top:-30,right:-30,width:120,height:120,borderRadius:"50%",background:`radial-gradient(circle,${s.color}22,transparent)`,animation:"orbPulse 4s ease-in-out infinite"}}/>
-          <button onClick={onClose} style={{position:"absolute",top:14,right:14,background:"rgba(255,255,255,0.85)",border:`1px solid ${s.border}`,borderRadius:10,padding:"6px 11px",cursor:"pointer",fontSize:13,color:C.textSec,fontFamily:"inherit",fontWeight:700,backdropFilter:"blur(4px)"}}>✕</button>
+          <button onClick={onClose} style={{position:"absolute",top:14,right:14,background:"rgba(255,255,255,0.85)",border:`1px solid ${s.border}`,borderRadius:10,padding:"6px 11px",cursor:"pointer",fontSize:13,color:C.textSec,fontFamily:"inherit",fontWeight:700}}>✕</button>
           <div style={{display:"flex",alignItems:"center",gap:18}}>
             <div style={{width:64,height:64,borderRadius:18,background:s.bg,display:"flex",alignItems:"center",justifyContent:"center",fontSize:32,boxShadow:`0 4px 20px ${s.color}33`,border:`2px solid ${s.border}`}}>{s.icon}</div>
             <div>
@@ -2617,21 +3087,12 @@ function ServiceDetailModal({ service: s, onClose }) {
               </div>
             </div>
           </div>
-          <div style={{marginTop:16,background:"rgba(255,255,255,0.6)",borderRadius:10,padding:"8px 14px",backdropFilter:"blur(4px)",border:`1px solid ${s.border}`}}>
-            <span style={{fontSize:12,color:C.textSec,fontWeight:700}}>🏆 Most active college: </span>
-            <span style={{fontSize:13,fontWeight:900,color:s.color}}>{s.topCollege}</span>
-          </div>
         </div>
-
         <div style={{padding:"24px 26px"}}>
           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>Key Metrics</div>
           <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:12}}>
             {statEntries.map(([k,v],i) => (
-              <div key={k} style={{
-                background:C.elevated, border:`1.5px solid ${C.border}`,
-                borderRadius:14, padding:"16px 18px",
-                animation:`cardIn 0.35s ease ${i*0.06}s both`,
-              }}>
+              <div key={k} style={{background:C.elevated,border:`1.5px solid ${C.border}`,borderRadius:14,padding:"16px 18px",animation:`cardIn 0.35s ease ${i*0.06}s both`}}>
                 <div style={{fontSize:20,marginBottom:6}}>{statIcons[k]||"📊"}</div>
                 <div style={{fontSize:22,fontWeight:900,color:s.color}}>{typeof v==="number"?v.toLocaleString():v}</div>
                 <div style={{fontSize:11,color:C.textSec,fontWeight:700,marginTop:2}}>{statLabels[k]||k}</div>
@@ -2650,20 +3111,14 @@ function OverallDashboard({ onBack }) {
   const [showPie, setShowPie] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
-
   useEffect(() => { setTimeout(() => setAnimIn(true), 80); }, []);
-
   const totalUsers = SERVICES.reduce((a, s) => a + s.users, 0);
   const mostUsed = [...SERVICES].sort((a, b) => b.users - a.users)[0];
-
   const animStyle = (i) => ({
     opacity: animIn ? 1 : 0,
     transform: animIn ? "translateY(0) scale(1)" : "translateY(28px) scale(0.96)",
     transition: `all 0.5s cubic-bezier(.4,0,.2,1) ${i * 0.07}s`,
   });
-
-  const handleServiceClick = (s) => setSelectedService(s);
-
   return (
     <div style={{ minHeight: "100vh", background: "linear-gradient(160deg,#f0f9ff 0%,#e0f2fe 40%,#f0fdf4 100%)", fontFamily: "'Nunito',sans-serif", color: C.textPri }}>
       <style>{`
@@ -2677,21 +3132,15 @@ function OverallDashboard({ onBack }) {
         .svc-card:hover{transform:translateY(-8px) scale(1.02)!important;box-shadow:0 24px 60px rgba(15,23,42,0.14)!important;}
         .svc-card{transition:all 0.3s cubic-bezier(.4,0,.2,1)!important;}
       `}</style>
-
-      {/* HEADER */}
       <div style={{ background: C.surface, borderBottom: `1px solid ${C.border}`, padding: "0 32px", boxShadow: "0 2px 14px rgba(15,23,42,0.06)", position: "sticky", top: 0, zIndex: 100 }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <button onClick={onBack} style={{ background: C.elevated, border: `1px solid ${C.border}`, color: C.textSec, borderRadius: 10, padding: "8px 16px", cursor: "pointer", fontSize: 13, fontFamily: "inherit", fontWeight: 700, transition: "all 0.2s" }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = "#3b82f6"; e.currentTarget.style.color = "#3b82f6"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textSec; }}>
-              ← Home
-            </button>
+            <button onClick={onBack} style={{ background: C.elevated, border: `1px solid ${C.border}`, color: C.textSec, borderRadius: 10, padding: "8px 16px", cursor: "pointer", fontSize: 13, fontFamily: "inherit", fontWeight: 700 }}>← Home</button>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
               <span style={{ fontSize: 28, animation: "float 3s ease-in-out infinite" }}>🌐</span>
               <div>
-                <div style={{ fontWeight: 900, fontSize: 18, color: "#1e40af", letterSpacing: -0.5 }}>OYS Platform</div>
-                <div style={{ fontSize: 11, color: C.textMut, fontWeight: 600, marginTop: -2 }}>Overall Services Dashboard</div>
+                <div style={{ fontWeight: 900, fontSize: 18, color: "#1e40af" }}>OYS Platform</div>
+                <div style={{ fontSize: 11, color: C.textMut, fontWeight: 600 }}>Overall Services Dashboard</div>
               </div>
             </div>
           </div>
@@ -2699,27 +3148,17 @@ function OverallDashboard({ onBack }) {
             <div style={{ background: "linear-gradient(135deg,#eff6ff,#dbeafe)", border: "1.5px solid #93c5fd", borderRadius: 12, padding: "8px 18px", fontSize: 13, fontWeight: 800, color: "#1e40af" }}>
               👥 {(totalUsers / 1000).toFixed(1)}K Total Users
             </div>
-            <button onClick={() => setShowPie(true)} style={{
-              background: "linear-gradient(135deg,#3b82f6,#6366f1)", color: "#fff", border: "none",
-              borderRadius: 12, padding: "10px 20px", cursor: "pointer", fontSize: 13, fontWeight: 800,
-              fontFamily: "inherit", boxShadow: "0 4px 18px rgba(59,130,246,0.4)", transition: "all 0.22s",
-              display: "flex", alignItems: "center", gap: 7, animation: "pulse 2.5s infinite",
-            }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 28px rgba(59,130,246,0.5)"; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 18px rgba(59,130,246,0.4)"; }}>
+            <button onClick={() => setShowPie(true)} style={{ background: "linear-gradient(135deg,#3b82f6,#6366f1)", color: "#fff", border: "none", borderRadius: 12, padding: "10px 20px", cursor: "pointer", fontSize: 13, fontWeight: 800, fontFamily: "inherit", boxShadow: "0 4px 18px rgba(59,130,246,0.4)", display: "flex", alignItems: "center", gap: 7 }}>
               📊 View Pie Chart
             </button>
           </div>
         </div>
       </div>
-
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "36px 32px" }}>
         <div style={{ ...animStyle(0), marginBottom: 36 }}>
-          <div style={{ marginBottom: 6, fontSize: 11, color: "#3b82f6", fontWeight: 800, letterSpacing: 2, textTransform: "uppercase" }}>Platform Analytics</div>
-          <h1 style={{ fontSize: 34, fontWeight: 900, margin: "0 0 6px", color: C.textPri, letterSpacing: -1 }}>All Services Overview</h1>
+          <h1 style={{ fontSize: 34, fontWeight: 900, margin: "0 0 6px", color: C.textPri }}>All Services Overview</h1>
           <p style={{ color: C.textSec, fontSize: 15, margin: 0, fontWeight: 600 }}>Real-time usage analytics across all OYS platform services</p>
         </div>
-
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 16, marginBottom: 40, ...animStyle(1) }}>
           {[
             { label: "Total Services", value: "8", icon: "🌐", color: "#3b82f6", bg: "#eff6ff", border: "#bfdbfe" },
@@ -2727,63 +3166,32 @@ function OverallDashboard({ onBack }) {
             { label: "Most Used", value: mostUsed.name, icon: mostUsed.icon, color: "#f59e0b", bg: "#fffbeb", border: "#fde68a", small: true },
             { label: "Active This Month", value: "42.1K", icon: "📈", color: "#6366f1", bg: "#eff6ff", border: "#c7d2fe" },
           ].map((s, i) => (
-            <div key={i} style={{
-              background: C.surface, border: `1.5px solid ${s.border}`, borderRadius: 18, padding: "20px 22px",
-              boxShadow: "0 4px 20px rgba(15,23,42,0.06)", transition: "all 0.22s",
-              animation: `cardIn 0.4s ease ${i * 0.08}s both`,
-            }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = C.shadowLg; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(15,23,42,0.06)"; }}>
+            <div key={i} style={{ background: C.surface, border: `1.5px solid ${s.border}`, borderRadius: 18, padding: "20px 22px", boxShadow: "0 4px 20px rgba(15,23,42,0.06)", animation: `cardIn 0.4s ease ${i * 0.08}s both` }}>
               <div style={{ background: s.bg, borderRadius: 10, padding: "8px 10px", fontSize: 22, display: "inline-block", marginBottom: 12 }}>{s.icon}</div>
               <div style={{ fontSize: s.small ? 16 : 26, fontWeight: 900, color: s.color, lineHeight: 1.2, marginBottom: 4 }}>{s.value}</div>
               <div style={{ fontSize: 12, color: C.textMut, fontWeight: 700 }}>{s.label}</div>
             </div>
           ))}
         </div>
-
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 22, ...animStyle(2) }}>
-          <div>
-            <div style={{ fontSize: 11, color: "#3b82f6", fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", marginBottom: 4 }}>All Services</div>
-            <h2 style={{ margin: 0, fontSize: 20, fontWeight: 900, color: C.textPri }}>Click any card to view detailed analytics</h2>
-          </div>
-          <div style={{ fontSize: 13, color: C.textMut, fontWeight: 700, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10, padding: "8px 16px" }}>
-            {SERVICES.length} services active
-          </div>
-        </div>
-
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           {SERVICES.map((s, i) => {
             const isHov = hoveredCard === i;
-            const totalUs = SERVICES.reduce((a, sv) => a + sv.users, 0);
-            const pct = Math.round((s.users / totalUs) * 100);
+            const pct = Math.round((s.users / totalUsers) * 100);
             const isLibrary = s.id === "elibrary";
             return (
               <div key={s.id} className="svc-card"
                 onMouseEnter={() => setHoveredCard(i)} onMouseLeave={() => setHoveredCard(null)}
-                onClick={() => handleServiceClick(s)}
-                style={{
-                  background: C.surface, borderRadius: 20, border: `2px solid ${isHov ? s.color : C.border}`,
-                  overflow: "hidden", cursor: "pointer", boxShadow: C.shadow,
-                  animation: `cardIn 0.45s ease ${i * 0.06}s both`, position: "relative",
-                }}>
-                {isHov && <div style={{ position: "absolute", inset: 0, background: "linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.35) 50%,transparent 60%)", animation: "shimmer 1.4s ease", pointerEvents: "none", zIndex: 1 }} />}
-
-                <div style={{ display: "flex", alignItems: "center", gap: 0 }}>
-                  <div style={{ width: 6, alignSelf: "stretch", background: s.color, flexShrink: 0, borderRadius: "20px 0 0 20px", transition: "width 0.2s", ...(isHov ? { width: 8 } : {}) }} />
+                onClick={() => setSelectedService(s)}
+                style={{ background: C.surface, borderRadius: 20, border: `2px solid ${isHov ? s.color : C.border}`, overflow: "hidden", cursor: "pointer", boxShadow: C.shadow, animation: `cardIn 0.45s ease ${i * 0.06}s both`, position: "relative" }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <div style={{ width: 6, alignSelf: "stretch", background: s.color, flexShrink: 0, borderRadius: "20px 0 0 20px" }} />
                   <div style={{ background: s.gradient, padding: "22px 24px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <div style={{ width: 60, height: 60, borderRadius: 16, background: "rgba(255,255,255,0.7)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28, boxShadow: `0 4px 16px ${s.color}22`, border: `2px solid ${s.border}`, transition: "transform 0.2s", transform: isHov ? "scale(1.1) rotate(-3deg)" : "scale(1)" }}>
-                      {s.icon}
-                    </div>
+                    <div style={{ width: 60, height: 60, borderRadius: 16, background: "rgba(255,255,255,0.7)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28, border: `2px solid ${s.border}` }}>{s.icon}</div>
                   </div>
-
                   <div style={{ flex: 1, padding: "20px 22px" }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 8 }}>
                       <div>
-                        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 3 }}>
-                          <span style={{ fontWeight: 900, fontSize: 17, color: C.textPri }}>{s.name}</span>
-                          <span style={{ background: s.bg, color: s.color, borderRadius: 7, padding: "2px 10px", fontSize: 11, fontWeight: 800, border: `1px solid ${s.border}` }}>#{i + 1}</span>
-                          {isLibrary && <span style={{ background: "#eff6ff", color: "#1e40af", borderRadius: 7, padding: "2px 10px", fontSize: 10, fontWeight: 800, border: "1px solid #bfdbfe" }}>🔍 Enhanced</span>}
-                        </div>
+                        <div style={{ fontWeight: 900, fontSize: 17, color: C.textPri, marginBottom: 3 }}>{s.name}</div>
                         <div style={{ fontSize: 12, color: C.textSec, fontWeight: 600 }}>{s.description}</div>
                       </div>
                       <div style={{ textAlign: "right", flexShrink: 0, marginLeft: 16 }}>
@@ -2791,40 +3199,15 @@ function OverallDashboard({ onBack }) {
                         <div style={{ fontSize: 11, color: C.textMut, fontWeight: 600 }}>total users</div>
                       </div>
                     </div>
-
-                    <div style={{ marginBottom: 12 }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: C.textMut, marginBottom: 4, fontWeight: 600 }}>
-                        <span>Platform share</span>
-                        <span style={{ color: s.color, fontWeight: 800 }}>{pct}%</span>
-                      </div>
+                    <div style={{ marginBottom: 10 }}>
                       <div style={{ height: 7, background: C.border, borderRadius: 8, overflow: "hidden" }}>
-                        <div style={{ width: `${pct}%`, height: "100%", background: `linear-gradient(90deg,${s.color},${s.color}99)`, borderRadius: 8, transition: "width 1.2s ease" }} />
+                        <div style={{ width: `${pct}%`, height: "100%", background: `linear-gradient(90deg,${s.color},${s.color}99)`, borderRadius: 8 }} />
                       </div>
                     </div>
-
-                    <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: C.textSec, fontWeight: 700 }}>
-                        <span>🏆</span><span>{s.topCollege}</span>
-                      </div>
-                      <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, fontWeight: 800, color: s.trendUp ? "#166534" : "#991b1b", background: s.trendUp ? "#f0fdf4" : "#fef2f2", padding: "3px 10px", borderRadius: 7, border: `1px solid ${s.trendUp ? "#86efac" : "#fca5a5"}` }}>
-                        {s.trendUp ? "↑" : "↓"} {s.trend}
-                      </div>
-                      {isLibrary && (
-                        <>
-                          <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: "#1e40af", fontWeight: 700, background: "#eff6ff", padding: "3px 10px", borderRadius: 7, border: "1px solid #bfdbfe" }}>
-                            ⬇️ {s.stats.downloads.toLocaleString()} downloads
-                          </div>
-                          <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: "#92400e", fontWeight: 700, background: "#fffbeb", padding: "3px 10px", borderRadius: 7, border: "1px solid #fde68a" }}>
-                            📨 {s.stats.requests} requests
-                          </div>
-                          <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: "#991b1b", fontWeight: 700, background: "#fef2f2", padding: "3px 10px", borderRadius: 7, border: "1px solid #fca5a5" }}>
-                            ⏳ {s.stats.pending} pending
-                          </div>
-                        </>
-                      )}
-                      <div style={{ marginLeft: "auto", color: s.color, fontSize: 13, fontWeight: 800, display: "flex", alignItems: "center", gap: 4, opacity: isHov ? 1 : 0, transition: "opacity 0.2s" }}>
-                        View Details →
-                      </div>
+                    <div style={{ display: "flex", gap: 14, alignItems: "center", flexWrap: "wrap" }}>
+                      <div style={{ fontSize: 12, color: C.textSec, fontWeight: 700 }}>🏆 {s.topCollege}</div>
+                      <div style={{ fontSize: 12, fontWeight: 800, color: "#166534", background: "#f0fdf4", padding: "3px 10px", borderRadius: 7, border: "1px solid #86efac" }}>↑ {s.trend}</div>
+                      <div style={{ marginLeft: "auto", color: s.color, fontSize: 13, fontWeight: 800, opacity: isHov ? 1 : 0, transition: "opacity 0.2s" }}>View Details →</div>
                     </div>
                   </div>
                 </div>
@@ -2832,34 +3215,10 @@ function OverallDashboard({ onBack }) {
             );
           })}
         </div>
-
-        <div style={{ marginTop: 40, background: "linear-gradient(135deg,#eff6ff,#dbeafe)", border: "2px solid #93c5fd", borderRadius: 20, padding: "24px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, flexWrap: "wrap", ...animStyle(10), position: "relative", overflow: "hidden" }}>
-          <div style={{ position: "absolute", top: -20, right: -20, width: 120, height: 120, borderRadius: "50%", background: "radial-gradient(circle,rgba(99,102,241,0.15),transparent)", animation: "orbPulse 4s ease-in-out infinite" }} />
-          <div>
-            <div style={{ fontSize: 11, color: "#1e40af", fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", marginBottom: 4 }}>Visual Analytics</div>
-            <h3 style={{ margin: "0 0 4px", fontSize: 17, fontWeight: 900, color: "#1e3a8a" }}>📊 Explore Usage Distribution</h3>
-            <p style={{ margin: 0, fontSize: 13, color: "#1e40af", fontWeight: 600 }}>Interactive pie chart with hover tooltips showing % breakdown of all services</p>
-          </div>
-          <button onClick={() => setShowPie(true)} style={{
-            background: "linear-gradient(135deg,#3b82f6,#6366f1)", color: "#fff", border: "none",
-            borderRadius: 14, padding: "14px 28px", cursor: "pointer", fontSize: 15, fontWeight: 800,
-            fontFamily: "inherit", boxShadow: "0 6px 24px rgba(59,130,246,0.4)", transition: "all 0.22s", whiteSpace: "nowrap",
-          }}
-            onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px) scale(1.03)"; e.currentTarget.style.boxShadow = "0 12px 36px rgba(59,130,246,0.5)"; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0) scale(1)"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(59,130,246,0.4)"; }}>
-            📊 Open Pie Chart
-          </button>
-        </div>
       </div>
-
       {showPie && <PieChart services={SERVICES} onClose={() => setShowPie(false)} />}
-      {/* CHANGE 3: E-Library gets its own rich analytics modal, others get generic */}
-      {selectedService && selectedService.id === "elibrary" && (
-        <ELibraryDetailModal service={selectedService} onClose={() => setSelectedService(null)} />
-      )}
-      {selectedService && selectedService.id !== "elibrary" && (
-        <ServiceDetailModal service={selectedService} onClose={() => setSelectedService(null)} />
-      )}
+      {selectedService && selectedService.id === "elibrary" && <ELibraryDetailModal service={selectedService} onClose={() => setSelectedService(null)} />}
+      {selectedService && selectedService.id !== "elibrary" && <ServiceDetailModal service={selectedService} onClose={() => setSelectedService(null)} />}
     </div>
   );
 }
@@ -2870,30 +3229,20 @@ function PremiumBanner({ completedCount, premiumMaterials, onOpen }) {
   const needed = 3 - completedCount;
   return (
     <div style={{
-      background: unlocked
-        ? "linear-gradient(135deg,#fef9c3,#fde68a,#fbbf24)"
-        : "linear-gradient(135deg,#f1f5f9,#e2e8f0)",
+      background: unlocked ? "linear-gradient(135deg,#fef9c3,#fde68a,#fbbf24)" : "linear-gradient(135deg,#f1f5f9,#e2e8f0)",
       border: `2px solid ${unlocked ? "#f59e0b" : C.border}`,
-      borderRadius: 20,
-      padding: "24px 28px",
-      marginBottom: 28,
-      position: "relative",
-      overflow: "hidden",
-      animation: "slideDown 0.5s ease",
+      borderRadius: 20, padding: "24px 28px", marginBottom: 28,
+      position: "relative", overflow: "hidden", animation: "slideDown 0.5s ease",
     }}>
       {unlocked && <div style={{position:"absolute",inset:0,background:"linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.4) 50%,transparent 60%)",animation:"shimmer 2.5s infinite"}}/>}
       <div style={{display:"flex",alignItems:"center",gap:20,flexWrap:"wrap",position:"relative"}}>
-        <div style={{fontSize:48,animation:unlocked?"bounce 1s ease infinite":"none"}}>
-          {unlocked ? "🔓" : "🔒"}
-        </div>
+        <div style={{fontSize:48,animation:unlocked?"bounce 1s ease infinite":"none"}}>{unlocked ? "🔓" : "🔒"}</div>
         <div style={{flex:1}}>
           <div style={{fontWeight:800,fontSize:18,color:unlocked?"#92400e":C.textSec,marginBottom:4}}>
             {unlocked ? "✨ Premium Unlocked! You've completed 3 materials" : `${needed} more material${needed>1?"s":""} to unlock Premium`}
           </div>
           <div style={{fontSize:13,color:unlocked?"#b45309":C.textMut}}>
-            {unlocked
-              ? `${premiumMaterials.length} premium materials now available — click any to open!`
-              : `Complete ${needed} more free material${needed>1?"s":""} to get access to all premium content`}
+            {unlocked ? `${premiumMaterials.length} premium materials now available — click any to open!` : `Complete ${needed} more free material${needed>1?"s":""} to get access to all premium content`}
           </div>
           {!unlocked && (
             <div style={{marginTop:10,background:"#e2e8f0",borderRadius:10,height:8,overflow:"hidden",maxWidth:300}}>
@@ -2904,13 +3253,7 @@ function PremiumBanner({ completedCount, premiumMaterials, onOpen }) {
         {unlocked && (
           <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:8}}>
             {premiumMaterials.slice(0,3).map(m=>(
-              <button key={m.id} onClick={()=>onOpen(m)} style={{
-                background:"rgba(255,255,255,0.7)",border:"1.5px solid #f59e0b",borderRadius:12,
-                padding:"10px 12px",cursor:"pointer",textAlign:"center",transition:"all 0.2s",
-                backdropFilter:"blur(8px)",
-              }}
-              onMouseEnter={e=>{e.currentTarget.style.background="rgba(255,255,255,0.95)";e.currentTarget.style.transform="translateY(-2px)";}}
-              onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,0.7)";e.currentTarget.style.transform="translateY(0)";}}>
+              <button key={m.id} onClick={()=>onOpen(m)} style={{background:"rgba(255,255,255,0.7)",border:"1.5px solid #f59e0b",borderRadius:12,padding:"10px 12px",cursor:"pointer",textAlign:"center",backdropFilter:"blur(8px)"}}>
                 <MatThumb m={m} size={40}/>
                 <div style={{fontSize:10,fontWeight:700,color:"#92400e",marginTop:6,lineHeight:1.2}}>{m.title}</div>
               </button>
@@ -2922,7 +3265,7 @@ function PremiumBanner({ completedCount, premiumMaterials, onOpen }) {
   );
 }
 
-// ─── CHANGE 1: E-Preparation Routing Popup (10-second countdown for Java material only) ──
+// ─── E-PREP ROUTING POPUP ─────────────────────────────────────────────────────
 function EPrepRoutingPopup({ material, onClose }) {
   const [countdown, setCountdown] = useState(10);
   const [messages] = useState([
@@ -2935,18 +3278,10 @@ function EPrepRoutingPopup({ material, onClose }) {
   const eprepUrl = EPREP_LINKS[material.id] || "https://www.javatpoint.com/java-quiz";
 
   useEffect(() => {
-    const msgInterval = setInterval(() => {
-      setMsgIndex(p => Math.min(p + 1, messages.length - 1));
-    }, 2500);
+    const msgInterval = setInterval(() => { setMsgIndex(p => Math.min(p + 1, messages.length - 1)); }, 2500);
     const countInterval = setInterval(() => {
       setCountdown(p => {
-        if (p <= 1) {
-          clearInterval(countInterval);
-          clearInterval(msgInterval);
-          window.open(eprepUrl, "_blank");
-          setTimeout(onClose, 300);
-          return 0;
-        }
+        if (p <= 1) { clearInterval(countInterval); clearInterval(msgInterval); window.open(eprepUrl, "_blank"); setTimeout(onClose, 300); return 0; }
         return p - 1;
       });
     }, 1000);
@@ -2954,53 +3289,24 @@ function EPrepRoutingPopup({ material, onClose }) {
   }, []);
 
   const pct = ((10 - countdown) / 10) * 100;
-  const cat = CATEGORIES[material.category];
-
   return (
     <div style={{position:"fixed",inset:0,background:"rgba(15,23,42,0.75)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:99000,backdropFilter:"blur(8px)",padding:20}}>
       <div style={{background:C.surface,borderRadius:24,maxWidth:480,width:"100%",boxShadow:C.shadowLg,overflow:"hidden",animation:"cardIn 0.4s cubic-bezier(.4,0,.2,1)"}}>
-        {/* Top gradient bar */}
         <div style={{height:6,background:`linear-gradient(90deg,#1e40af,#6366f1,#8b5cf6)`,width:"100%"}}/>
-
         <div style={{padding:"32px 32px 28px",textAlign:"center"}}>
-          {/* Animated icon */}
-          <div style={{width:80,height:80,borderRadius:"50%",background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"3px solid #93c5fd",margin:"0 auto 20px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:36,animation:"orbPulse 2s ease-in-out infinite"}}>
-            🎯
-          </div>
-
+          <div style={{width:80,height:80,borderRadius:"50%",background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"3px solid #93c5fd",margin:"0 auto 20px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:36,animation:"orbPulse 2s ease-in-out infinite"}}>🎯</div>
           <div style={{fontSize:11,color:"#1e40af",fontWeight:800,letterSpacing:2,textTransform:"uppercase",marginBottom:8}}>Redirecting to</div>
           <h2 style={{margin:"0 0 6px",fontSize:20,fontWeight:900,color:C.textPri}}>E-Preparation Platform</h2>
           <p style={{margin:"0 0 24px",fontSize:13,color:C.textSec,fontWeight:600}}>{material.title}</p>
-
-          {/* Message area */}
           <div style={{background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:14,padding:"16px 20px",marginBottom:24,minHeight:52,display:"flex",alignItems:"center",justifyContent:"center"}}>
-            <p style={{margin:0,fontSize:13,color:"#1e40af",fontWeight:700,animation:"fadeUp 0.4s ease"}}>{messages[msgIndex]}</p>
+            <p style={{margin:0,fontSize:13,color:"#1e40af",fontWeight:700}}>{messages[msgIndex]}</p>
           </div>
-
-          {/* Sections shown */}
-          <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginBottom:24}}>
-            {[
-              {icon:"📝",label:"Mock Tests",val:"30 Qs"},
-              {icon:"📊",label:"Analytics",val:"Real-time"},
-              {icon:"🏆",label:"Leaderboard",val:"Live"},
-            ].map((item,i)=>(
-              <div key={i} style={{background:C.elevated,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 8px",animation:`cardIn 0.4s ease ${i*0.1+0.2}s both`}}>
-                <div style={{fontSize:20,marginBottom:4}}>{item.icon}</div>
-                <div style={{fontSize:11,fontWeight:800,color:C.textPri}}>{item.label}</div>
-                <div style={{fontSize:10,color:"#1e40af",fontWeight:700,marginTop:2}}>{item.val}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Countdown ring + bar */}
           <div style={{marginBottom:20}}>
             <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:12,marginBottom:10}}>
               <div style={{width:48,height:48,position:"relative",flexShrink:0}}>
                 <svg width={48} height={48} style={{transform:"rotate(-90deg)"}}>
                   <circle cx={24} cy={24} r={20} fill="none" stroke={C.border} strokeWidth={4}/>
-                  <circle cx={24} cy={24} r={20} fill="none" stroke="#1e40af" strokeWidth={4}
-                    strokeDasharray={125.6} strokeDashoffset={125.6 - (pct/100)*125.6}
-                    style={{transition:"stroke-dashoffset 0.9s linear",strokeLinecap:"round"}}/>
+                  <circle cx={24} cy={24} r={20} fill="none" stroke="#1e40af" strokeWidth={4} strokeDasharray={125.6} strokeDashoffset={125.6-(pct/100)*125.6} style={{transition:"stroke-dashoffset 0.9s linear",strokeLinecap:"round"}}/>
                 </svg>
                 <div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize:14,fontWeight:900,color:"#1e40af"}}>{countdown}</div>
               </div>
@@ -3013,11 +3319,9 @@ function EPrepRoutingPopup({ material, onClose }) {
               <div style={{width:`${pct}%`,height:"100%",background:"linear-gradient(90deg,#3b82f6,#6366f1)",borderRadius:8,transition:"width 0.9s linear"}}/>
             </div>
           </div>
-
           <div style={{display:"flex",gap:10}}>
             <button onClick={onClose} style={{flex:1,background:C.elevated,color:C.textSec,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 0",cursor:"pointer",fontWeight:700,fontSize:13,fontFamily:"inherit"}}>✕ Cancel</button>
-            <a href={eprepUrl} target="_blank" rel="noreferrer" onClick={onClose}
-              style={{flex:2,background:"linear-gradient(135deg,#1e40af,#3b82f6)",color:"#fff",border:"none",borderRadius:12,padding:"12px 0",cursor:"pointer",fontWeight:800,fontSize:13,fontFamily:"inherit",textDecoration:"none",display:"flex",alignItems:"center",justifyContent:"center",gap:6,boxShadow:"0 4px 18px rgba(30,64,175,0.35)"}}>
+            <a href={eprepUrl} target="_blank" rel="noreferrer" onClick={onClose} style={{flex:2,background:"linear-gradient(135deg,#1e40af,#3b82f6)",color:"#fff",border:"none",borderRadius:12,padding:"12px 0",cursor:"pointer",fontWeight:800,fontSize:13,fontFamily:"inherit",textDecoration:"none",display:"flex",alignItems:"center",justifyContent:"center",gap:6,boxShadow:"0 4px 18px rgba(30,64,175,0.35)"}}>
               🚀 Go Now
             </a>
           </div>
@@ -3041,7 +3345,6 @@ function StudentDashboard({ onBack }) {
   const [activeView, setActiveView]     = useState("library");
   const { toasts, add: toast }          = useToast();
   const [animIn, setAnimIn]             = useState(false);
-  // CHANGE 1: e-prep routing popup state
   const [eprepPopup, setEprepPopup]     = useState(null);
   const completedCount = 3;
 
@@ -3075,13 +3378,8 @@ function StudentDashboard({ onBack }) {
     toast(`"${m.title}" download started!`,"success");
   };
 
-  // CHANGE 1: E-Prep click handler — Java (id=1) shows routing popup, others open directly
   const handleEprepClick = (m, e) => {
-    if (m.id === 1) {
-      e.preventDefault();
-      setEprepPopup(m);
-    }
-    // for other materials, let the <a href> work normally
+    if (m.id === 1) { e.preventDefault(); setEprepPopup(m); }
   };
 
   const submitRequest = data=>{
@@ -3094,6 +3392,12 @@ function StudentDashboard({ onBack }) {
 
   const subOptions = activeCategory!=="all"?["all",...CATEGORY_SUBS[activeCategory]]:["all"];
   const myPending = requests.filter(r=>r.status==="pending").length;
+
+  const getStatusBadge = (status) => {
+    if (status === "approved") return { bg:"#f0fdf4", color:"#166534", border:"#86efac", text:"✅ Approved" };
+    if (status === "coming_soon") return { bg:"#eff6ff", color:"#1e40af", border:"#93c5fd", text:"📅 Adding Soon" };
+    return { bg:"#fffbeb", color:"#92400e", border:"#fcd34d", text:"⏳ Pending" };
+  };
 
   return (
     <div style={{minHeight:"100vh",background:C.bg,color:C.textPri,fontFamily:"'Nunito',sans-serif"}}>
@@ -3117,7 +3421,6 @@ function StudentDashboard({ onBack }) {
       `}</style>
       <ToastContainer toasts={toasts}/>
 
-      {/* HEADER */}
       <div style={{background:C.surface,borderBottom:`1px solid ${C.border}`,padding:"0 28px",boxShadow:"0 2px 12px rgba(15,23,42,0.06)"}}>
         <div style={{maxWidth:1300,margin:"0 auto",display:"flex",alignItems:"center",justifyContent:"space-between",height:66}}>
           <div style={{display:"flex",alignItems:"center",gap:14}}>
@@ -3128,14 +3431,7 @@ function StudentDashboard({ onBack }) {
             </div>
           </div>
           <div style={{display:"flex",gap:10,alignItems:"center"}}>
-            <div style={{
-              background:completedCount>=3?"#f0fdf4":"#fffbeb",
-              border:`1.5px solid ${completedCount>=3?"#86efac":"#fcd34d"}`,
-              borderRadius:20,padding:"6px 16px",
-              color:completedCount>=3?"#166534":"#92400e",
-              fontSize:12,fontWeight:700,fontFamily:"inherit",
-              animation:completedCount>=3?"pulse 2s infinite":"none",
-            }}>
+            <div style={{background:completedCount>=3?"#f0fdf4":"#fffbeb",border:`1.5px solid ${completedCount>=3?"#86efac":"#fcd34d"}`,borderRadius:20,padding:"6px 16px",color:completedCount>=3?"#166534":"#92400e",fontSize:12,fontWeight:700,fontFamily:"inherit",animation:completedCount>=3?"pulse 2s infinite":"none"}}>
               {completedCount>=3?"🔓 Premium Unlocked!!":"✅ "+completedCount+"/3 for Premium"}
             </div>
             <button className="btn-hover" onClick={()=>setShowReqModal(true)} style={{background:C.amber,color:"#fff",border:"none",borderRadius:10,padding:"9px 18px",cursor:"pointer",fontSize:13,fontWeight:700,fontFamily:"inherit",boxShadow:"0 4px 14px rgba(245,158,11,0.35)"}}>
@@ -3145,16 +3441,12 @@ function StudentDashboard({ onBack }) {
         </div>
       </div>
 
-      {/* SUB NAV */}
       <div style={{background:C.surface,borderBottom:`1px solid ${C.border}`,padding:"0 28px"}}>
         <div style={{maxWidth:1300,margin:"0 auto",display:"flex",gap:0}}>
           {[["library","📖 Library"],["requests","📨 My Requests"]].map(([v,l])=>(
-            <button key={v} onClick={()=>setActiveView(v)} style={{
-              background:"none",border:"none",padding:"14px 22px",
-              color:activeView===v?C.amber:C.textSec,
-              borderBottom:`2.5px solid ${activeView===v?C.amber:"transparent"}`,
-              cursor:"pointer",fontSize:13,fontWeight:700,fontFamily:"inherit",transition:"all 0.2s",
-            }}>{l} {v==="requests"&&myPending>0&&<span style={{background:C.rose,color:"#fff",borderRadius:10,padding:"1px 7px",fontSize:10,marginLeft:6}}>{myPending}</span>}</button>
+            <button key={v} onClick={()=>setActiveView(v)} style={{background:"none",border:"none",padding:"14px 22px",color:activeView===v?C.amber:C.textSec,borderBottom:`2.5px solid ${activeView===v?C.amber:"transparent"}`,cursor:"pointer",fontSize:13,fontWeight:700,fontFamily:"inherit",transition:"all 0.2s"}}>
+              {l} {v==="requests"&&myPending>0&&<span style={{background:C.rose,color:"#fff",borderRadius:10,padding:"1px 7px",fontSize:10,marginLeft:6}}>{myPending}</span>}
+            </button>
           ))}
         </div>
       </div>
@@ -3174,25 +3466,22 @@ function StudentDashboard({ onBack }) {
               </div>
             ):(
               <div style={{display:"flex",flexDirection:"column",gap:14}}>
-                {requests.map(r=>(
-                  <div key={r.id} style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:16,padding:"20px 26px",display:"flex",alignItems:"center",gap:20,boxShadow:C.shadow,animation:"cardIn 0.4s ease"}}>
-                    <div style={{flex:1}}>
-                      <div style={{fontWeight:800,fontSize:15,marginBottom:4}}>{r.title}</div>
-                      <div style={{fontSize:12,color:C.textSec,marginBottom:6}}>{CATEGORIES[r.category]?.label} → {r.sub}</div>
-                      <div style={{fontSize:12,color:C.textMut,fontStyle:"italic"}}>"{r.reason}"</div>
-                    </div>
-                    <div style={{textAlign:"right"}}>
-                      <div style={{display:"inline-block",borderRadius:10,padding:"6px 16px",fontSize:12,fontWeight:700,
-                        background:r.status==="approved"?"#f0fdf4":r.status==="rejected"?"#fef2f2":"#fffbeb",
-                        color:r.status==="approved"?"#166534":r.status==="rejected"?"#991b1b":"#92400e",
-                        border:`1.5px solid ${r.status==="approved"?"#86efac":r.status==="rejected"?"#fca5a5":"#fcd34d"}`,
-                      }}>
-                        {r.status==="approved"?"✅ Approved":r.status==="rejected"?"❌ Rejected":"⏳ Pending"}
+                {requests.map(r=>{
+                  const badge = getStatusBadge(r.status);
+                  return (
+                    <div key={r.id} style={{background:C.surface,border:`1px solid ${C.border}`,borderRadius:16,padding:"20px 26px",display:"flex",alignItems:"center",gap:20,boxShadow:C.shadow,animation:"cardIn 0.4s ease"}}>
+                      <div style={{flex:1}}>
+                        <div style={{fontWeight:800,fontSize:15,marginBottom:4}}>{r.title}</div>
+                        <div style={{fontSize:12,color:C.textSec,marginBottom:6}}>{CATEGORIES[r.category]?.label} → {r.sub}</div>
+                        <div style={{fontSize:12,color:C.textMut,fontStyle:"italic"}}>"{r.reason}"</div>
                       </div>
-                      <div style={{fontSize:11,color:C.textMut,marginTop:6}}>{r.date}</div>
+                      <div style={{textAlign:"right"}}>
+                        <div style={{display:"inline-block",borderRadius:10,padding:"6px 16px",fontSize:12,fontWeight:700,background:badge.bg,color:badge.color,border:`1.5px solid ${badge.border}`}}>{badge.text}</div>
+                        <div style={{fontSize:11,color:C.textMut,marginTop:6}}>{r.date}</div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
           </div>
@@ -3214,23 +3503,59 @@ function StudentDashboard({ onBack }) {
                   <div style={{fontSize:36,marginBottom:10}}>{cat.icon}</div>
                   <div style={{fontWeight:800,fontSize:15,color:activeCategory===key?cat.color:C.textPri}}>{cat.label}</div>
                   <div style={{fontSize:12,marginTop:4,color:C.textSec}}>{CATEGORY_SUBS[key].length} streams · {_globalMaterials.filter(m=>m.category===key).length} materials</div>
+                  {/* India/Abroad indicator for Higher Education */}
+                  {key==="higher"&&(
+                    <div style={{marginTop:8,display:"flex",gap:5,flexWrap:"wrap"}}>
+                      <span style={{background:"#f0fdf4",color:"#166534",borderRadius:6,padding:"2px 7px",fontSize:10,fontWeight:700,border:"1px solid #86efac"}}>🇮🇳 India</span>
+                      <span style={{background:"#eff6ff",color:"#1e40af",borderRadius:6,padding:"2px 7px",fontSize:10,fontWeight:700,border:"1px solid #93c5fd"}}>✈️ Abroad</span>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
+
+            {/* Higher Education India/Abroad sub-filter */}
+            {activeCategory==="higher"&&(
+              <div style={{background:"linear-gradient(135deg,#ede9fe,#ddd6fe)",border:"1.5px solid #c4b5fd",borderRadius:14,padding:"14px 18px",marginBottom:18,display:"flex",alignItems:"center",gap:12,flexWrap:"wrap"}}>
+                <span style={{fontSize:13,fontWeight:800,color:"#5b21b6"}}>🌍 Filter by Destination:</span>
+                {[["all","🌐 All"],["India","🇮🇳 India"],["Abroad","✈️ Abroad"],["Both","🌐 Both"]].map(([v,l])=>(
+                  <button key={v} onClick={()=>setActiveSub(v==="all"?"all":v)} style={{padding:"7px 14px",borderRadius:9,border:`1.5px solid ${activeSub===(v==="all"?"all":v)?"#7c3aed":"#c4b5fd"}`,background:activeSub===(v==="all"?"all":v)?"#7c3aed":"rgba(255,255,255,0.7)",color:activeSub===(v==="all"?"all":v)?"#fff":"#5b21b6",cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"inherit",transition:"all 0.18s"}}>
+                    {l}
+                  </button>
+                ))}
+              </div>
+            )}
+
             <div style={{display:"flex",gap:12,alignItems:"center",marginBottom:22,flexWrap:"wrap"}}>
-              {activeCategory!=="all"&&(
+              {activeCategory!=="all"&&activeCategory!=="higher"&&(
                 <select value={activeSub} onChange={e=>setActiveSub(e.target.value)} style={{padding:"9px 14px",borderRadius:10,border:`1px solid ${C.border}`,background:C.surface,color:C.textPri,fontSize:13,cursor:"pointer",outline:"none",fontFamily:"inherit"}}>
-                  {subOptions.map(s=><option key={s} value={s}>{s==="all"?"All Sub-categories":s}</option>)}
+                  {["all",...CATEGORY_SUBS[activeCategory]].map(s=><option key={s} value={s}>{s==="all"?"All Sub-categories":s}</option>)}
                 </select>
               )}
-              <div style={{marginLeft:"auto",color:C.textMut,fontSize:13,fontWeight:600}}>{filtered.length} materials</div>
+              <div style={{marginLeft:"auto",color:C.textMut,fontSize:13,fontWeight:600}}>
+                {filtered.filter(m => {
+                  if (activeCategory !== "higher") return true;
+                  if (activeSub === "all") return true;
+                  if (activeSub === "India" || activeSub === "Abroad") return m.indiaOrAbroad === activeSub || m.indiaOrAbroad === "Both";
+                  if (activeSub === "Both") return m.indiaOrAbroad === "Both";
+                  return true;
+                }).length} materials
+              </div>
             </div>
+
             <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(250px,1fr))",gap:20}}>
-              {filtered.map((m,i)=>{
+              {filtered.filter(m => {
+                if (activeCategory !== "higher") return true;
+                if (activeSub === "all") return true;
+                if (activeSub === "India") return m.indiaOrAbroad === "India" || m.indiaOrAbroad === "Both";
+                if (activeSub === "Abroad") return m.indiaOrAbroad === "Abroad" || m.indiaOrAbroad === "Both";
+                if (activeSub === "Both") return m.indiaOrAbroad === "Both";
+                return true;
+              }).map((m,i)=>{
                 const cat=CATEGORIES[m.category];
                 const locked=m.type==="premium"&&completedCount<3;
                 const crash=CRASH_COURSES[m.id];
-                const isJava = m.id === 1; // CHANGE 1: Java material
+                const isJava = m.id === 1;
                 return (
                   <div key={m.id} className="mat-card" style={{background:C.surface,borderRadius:18,border:`1.5px solid ${m.bookmarked?C.amber:C.border}`,overflow:"hidden",animation:`cardIn 0.45s ease ${i*0.05}s both`,boxShadow:C.shadow,position:"relative"}}>
                     <div style={{background:cat.gradient,padding:"28px 0 20px",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:8,position:"relative",minHeight:130}}>
@@ -3239,7 +3564,6 @@ function StudentDashboard({ onBack }) {
                       {!locked&&m.type==="premium"&&<div style={{position:"absolute",top:10,left:10,background:cat.color,color:"#fff",fontSize:10,fontWeight:700,borderRadius:7,padding:"3px 9px"}}>✨ PREMIUM</div>}
                       {m.uploadType==="pdf"&&<div style={{position:"absolute",bottom:10,right:10,background:"#fef2f2",color:"#991b1b",border:"1px solid #fca5a5",fontSize:10,fontWeight:700,borderRadius:6,padding:"2px 8px"}}>📄 PDF</div>}
                       {m.uploadType==="link"&&<div style={{position:"absolute",bottom:10,right:10,background:"#eff6ff",color:"#1e40af",border:"1px solid #93c5fd",fontSize:10,fontWeight:700,borderRadius:6,padding:"2px 8px"}}>🔗 Link</div>}
-                      {/* Higher Education India/Abroad badge */}
                       {m.category==="higher"&&m.indiaOrAbroad&&(
                         <div style={{position:"absolute",bottom:10,left:10,background:m.indiaOrAbroad==="India"?"#f0fdf4":m.indiaOrAbroad==="Abroad"?"#eff6ff":"#f5f3ff",color:m.indiaOrAbroad==="India"?"#166534":m.indiaOrAbroad==="Abroad"?"#1e40af":"#5b21b6",border:`1px solid ${m.indiaOrAbroad==="India"?"#86efac":m.indiaOrAbroad==="Abroad"?"#93c5fd":"#c4b5fd"}`,fontSize:10,fontWeight:700,borderRadius:6,padding:"2px 8px"}}>
                           {m.indiaOrAbroad==="India"?"🇮🇳 India":m.indiaOrAbroad==="Abroad"?"✈️ Abroad":"🌐 Both"}
@@ -3273,28 +3597,13 @@ function StudentDashboard({ onBack }) {
                       </div>
                       {!locked&&(
                         <div style={{display:"flex",gap:7}}>
-                          {/* CHANGE 1: Java gets popup, others get direct link */}
                           {isJava ? (
-                            <button
-                              onClick={()=>setEprepPopup(m)}
-                              style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#1e40af",fontFamily:"inherit",transition:"all 0.18s"}}
-                              onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#dbeafe,#bfdbfe)";e.currentTarget.style.transform="translateY(-1px)";}}
-                              onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg,#eff6ff,#dbeafe)";e.currentTarget.style.transform="translateY(0)";}}>
-                              🎯 E-Prep
-                            </button>
+                            <button onClick={()=>setEprepPopup(m)} style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#1e40af",fontFamily:"inherit"}}>🎯 E-Prep</button>
                           ) : (
-                            <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#1e40af",textDecoration:"none",transition:"all 0.18s"}}
-                            onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#dbeafe,#bfdbfe)";e.currentTarget.style.transform="translateY(-1px)";}}
-                            onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg,#eff6ff,#dbeafe)";e.currentTarget.style.transform="translateY(0)";}}>
-                              🎯 E-Prep
-                            </a>
+                            <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#1e40af",textDecoration:"none"}}>🎯 E-Prep</a>
                           )}
                           {crash&&(
-                            <a href={crash.url} target="_blank" rel="noreferrer" style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#fff7ed,#ffedd5)",border:"1.5px solid #fdba74",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#c2410c",textDecoration:"none",transition:"all 0.18s"}}
-                            onMouseEnter={e=>{e.currentTarget.style.background="linear-gradient(135deg,#ffedd5,#fed7aa)";e.currentTarget.style.transform="translateY(-1px)";}}
-                            onMouseLeave={e=>{e.currentTarget.style.background="linear-gradient(135deg,#fff7ed,#ffedd5)";e.currentTarget.style.transform="translateY(0)";}}>
-                              ⚡ Crash Course
-                            </a>
+                            <a href={crash.url} target="_blank" rel="noreferrer" style={{flex:1,display:"flex",alignItems:"center",justifyContent:"center",gap:5,background:"linear-gradient(135deg,#fff7ed,#ffedd5)",border:"1.5px solid #fdba74",borderRadius:9,padding:"8px 0",cursor:"pointer",fontSize:11,fontWeight:700,color:"#c2410c",textDecoration:"none"}}>⚡ Crash Course</a>
                           )}
                         </div>
                       )}
@@ -3303,26 +3612,18 @@ function StudentDashboard({ onBack }) {
                 );
               })}
             </div>
-            {filtered.length===0&&(
-              <div style={{textAlign:"center",padding:"70px 0",color:C.textMut}}>
-                <div style={{fontSize:52,marginBottom:12}}>🔍</div>
-                <div style={{fontSize:16,fontWeight:700,color:C.textSec}}>No materials found</div>
-                <div style={{fontSize:13,marginTop:6}}>Try a different search or category</div>
-              </div>
-            )}
           </>
         )}
       </div>
 
       {openMaterial&&<MaterialModal material={openMaterial} onClose={()=>setOpenMat(null)} toast={toast} onEprepClick={m=>setEprepPopup(m)}/>}
       {showReqModal&&<RequestMaterialModal onClose={()=>setShowReqModal(false)} onSubmit={submitRequest}/>}
-      {/* CHANGE 1: Routing popup */}
       {eprepPopup&&<EPrepRoutingPopup material={eprepPopup} onClose={()=>setEprepPopup(null)}/>}
     </div>
   );
 }
 
-// ─── MATERIAL MODAL ───────────────────────────────────────────────────────────
+// ─── MATERIAL MODAL (Mock Test tab REMOVED) ───────────────────────────────────
 function MaterialModal({ material:m, onClose, toast, onEprepClick }) {
   const [topics, setTopics] = useState(JAVA_TOPICS);
   const [activeTab, setActiveTab] = useState("topics");
@@ -3345,24 +3646,17 @@ function MaterialModal({ material:m, onClose, toast, onEprepClick }) {
               <h2 style={{margin:"0 0 6px",color:cat.color,fontSize:20,fontWeight:800}}>{m.title}</h2>
               <div style={{fontSize:12,color:C.textSec,marginBottom:8}}>{m.sub} · {m.pages} pages · {m.topics} topics</div>
               <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
-                {/* CHANGE 1: Java e-prep button opens popup */}
                 {isJava ? (
-                  <button onClick={()=>onEprepClick(m)} style={{display:"inline-flex",alignItems:"center",gap:5,background:"#1e40af",color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,border:"none",cursor:"pointer",fontFamily:"inherit",boxShadow:"0 4px 14px rgba(30,64,175,0.35)",transition:"all 0.18s"}}
-                    onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"}
-                    onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
+                  <button onClick={()=>onEprepClick(m)} style={{display:"inline-flex",alignItems:"center",gap:5,background:"#1e40af",color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,border:"none",cursor:"pointer",fontFamily:"inherit",boxShadow:"0 4px 14px rgba(30,64,175,0.35)"}}>
                     🎯 E-Preparation
                   </button>
                 ) : (
-                  <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,background:"#1e40af",color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 14px rgba(30,64,175,0.35)",transition:"all 0.18s"}}
-                    onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"}
-                    onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
+                  <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,background:"#1e40af",color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 14px rgba(30,64,175,0.35)"}}>
                     🎯 E-Preparation
                   </a>
                 )}
                 {crash&&(
-                  <a href={crash.url} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,background:crash.color,color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,textDecoration:"none",boxShadow:`0 4px 14px ${crash.color}44`,transition:"all 0.18s"}}
-                    onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"}
-                    onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}>
+                  <a href={crash.url} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:5,background:crash.color,color:"#fff",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,textDecoration:"none",boxShadow:`0 4px 14px ${crash.color}44`}}>
                     ⚡ {crash.title}
                   </a>
                 )}
@@ -3382,10 +3676,11 @@ function MaterialModal({ material:m, onClose, toast, onEprepClick }) {
             )}
           </div>
         </div>
+        {/* TABS: mock test removed */}
         <div style={{display:"flex",borderBottom:`1px solid ${C.border}`,padding:"0 24px"}}>
-          {["topics","test","notes"].map(t=>(
-            <button key={t} onClick={()=>setActiveTab(t)} style={{padding:"13px 20px",border:"none",background:"none",fontWeight:700,fontSize:13,cursor:"pointer",color:activeTab===t?cat.color:C.textSec,borderBottom:`2.5px solid ${activeTab===t?cat.color:"transparent"}`,textTransform:"capitalize",fontFamily:"inherit",transition:"all 0.2s"}}>
-              {t==="topics"?"📚 Topics":t==="test"?"📝 Mock Test":"🗒️ Notes"}
+          {[["topics","📚 Topics"],["notes","🗒️ Notes"]].map(([t,l])=>(
+            <button key={t} onClick={()=>setActiveTab(t)} style={{padding:"13px 20px",border:"none",background:"none",fontWeight:700,fontSize:13,cursor:"pointer",color:activeTab===t?cat.color:C.textSec,borderBottom:`2.5px solid ${activeTab===t?cat.color:"transparent"}`,fontFamily:"inherit",transition:"all 0.2s"}}>
+              {l}
             </button>
           ))}
         </div>
@@ -3403,21 +3698,6 @@ function MaterialModal({ material:m, onClose, toast, onEprepClick }) {
               {t.done&&<span style={{fontSize:10,background:cat.color,color:"#fff",borderRadius:6,padding:"3px 9px",fontWeight:700}}>Done</span>}
             </div>
           ))}
-          {activeTab==="test"&&(
-            <div style={{textAlign:"center",padding:"30px 0"}}>
-              <div style={{fontSize:52,marginBottom:16}}>📝</div>
-              <h3 style={{color:C.textPri,marginBottom:8,fontWeight:800,fontSize:18}}>Mock Test – {m.title}</h3>
-              <p style={{color:C.textSec,marginBottom:28,fontSize:14}}>30 questions · 45 minutes · Results saved to profile</p>
-              <div style={{display:"flex",gap:14,justifyContent:"center",flexWrap:"wrap"}}>
-                <button onClick={()=>{toast("Mock test started!","success");onClose();}} style={{background:cat.color,color:"#fff",border:"none",borderRadius:12,padding:"14px 32px",fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"inherit",boxShadow:`0 6px 24px ${cat.color}44`}}>🚀 Start Mock Test</button>
-                {isJava ? (
-                  <button onClick={()=>onEprepClick(m)} style={{display:"inline-flex",alignItems:"center",gap:6,background:"#1e40af",color:"#fff",borderRadius:12,padding:"14px 24px",fontSize:15,fontWeight:700,border:"none",cursor:"pointer",fontFamily:"inherit",boxShadow:"0 6px 24px rgba(30,64,175,0.3)"}}>🎯 E-Preparation Platform</button>
-                ) : (
-                  <a href={EPREP_LINKS[m.id]} target="_blank" rel="noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6,background:"#1e40af",color:"#fff",borderRadius:12,padding:"14px 24px",fontSize:15,fontWeight:700,textDecoration:"none",boxShadow:"0 6px 24px rgba(30,64,175,0.3)"}}>🎯 E-Preparation Platform</a>
-                )}
-              </div>
-            </div>
-          )}
           {activeTab==="notes"&&(
             <div>
               <textarea placeholder="Write your personal notes here..." style={{width:"100%",minHeight:160,borderRadius:12,padding:14,border:`1.5px solid ${C.border}`,background:C.elevated,color:C.textPri,fontSize:13,resize:"vertical",boxSizing:"border-box",outline:"none",fontFamily:"inherit"}}/>
@@ -3476,17 +3756,97 @@ function RequestMaterialModal({ onClose, onSubmit }) {
   );
 }
 
-// ─── CHANGE 2: Student Analytics Dashboard (Admin) ────────────────────────────
+// ─── STUDENT ANALYTICS DASHBOARD (Department-wise replaces By Material) ───────
 function StudentAnalyticsDashboard({ materials, students }) {
-  const [view, setView] = useState("college"); // "college" | "material"
+  // views: "college" | "private" | "government" | "higher"
+  const [view, setView] = useState("college");
+  const [higherFilter, setHigherFilter] = useState("all"); // all | India | Abroad | Both
+
+  const getDeptMaterials = (cat) => {
+    return materials.filter(m => m.category === cat).sort((a,b)=>b.downloads-a.downloads);
+  };
+
+  const getHigherMaterials = () => {
+    return materials.filter(m => {
+      if (m.category !== "higher") return false;
+      if (higherFilter === "all") return true;
+      if (higherFilter === "India") return m.indiaOrAbroad === "India" || m.indiaOrAbroad === "Both";
+      if (higherFilter === "Abroad") return m.indiaOrAbroad === "Abroad" || m.indiaOrAbroad === "Both";
+      if (higherFilter === "Both") return m.indiaOrAbroad === "Both";
+      return true;
+    }).sort((a,b)=>b.downloads-a.downloads);
+  };
+
+  const deptTabs = [
+    { id: "college", label: "🏛️ By College", color: C.amber },
+    { id: "private", label: "🏢 Private Sector", color: "#f59e0b" },
+    { id: "government", label: "🏛️ Government", color: "#10b981" },
+    { id: "higher", label: "🎓 Higher Education", color: "#6366f1" },
+  ];
+
+  const renderDeptMaterials = (mats, cat) => {
+    const catInfo = CATEGORIES[cat];
+    if (mats.length === 0) {
+      return (
+        <div style={{textAlign:"center",padding:"40px 0",color:C.textMut}}>
+          <div style={{fontSize:40,marginBottom:10}}>📭</div>
+          <div style={{fontSize:14,fontWeight:600}}>No materials found</div>
+        </div>
+      );
+    }
+    const maxDl = mats[0]?.downloads || 1;
+    return (
+      <div style={{display:"flex",flexDirection:"column",gap:12}}>
+        {mats.map((m, i) => {
+          const pct = Math.round((m.downloads / maxDl) * 100);
+          const medals = ["🥇","🥈","🥉"];
+          // Get views from MOST_VIEWED_MATERIALS if available
+          const viewed = MOST_VIEWED_MATERIALS.find(v => v.id === m.id);
+          return (
+            <div key={m.id} style={{background:C.surface,border:`1.5px solid ${catInfo.color}22`,borderRadius:14,padding:"18px 20px",animation:`cardIn 0.35s ease ${i*0.06}s both`,boxShadow:C.shadow}}>
+              <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:12}}>
+                <div style={{width:48,height:48,borderRadius:12,background:catInfo.bg,display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,flexShrink:0,border:`1px solid ${catInfo.border}`}}>{m.emoji}</div>
+                <div style={{flex:1}}>
+                  <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:4,flexWrap:"wrap"}}>
+                    <span style={{fontWeight:800,fontSize:14}}>{m.title}</span>
+                    <span style={{fontSize:16,flexShrink:0}}>{medals[i]||`#${i+1}`}</span>
+                    {m.category==="higher"&&m.indiaOrAbroad&&(
+                      <span style={{background:m.indiaOrAbroad==="India"?"#f0fdf4":m.indiaOrAbroad==="Abroad"?"#eff6ff":"#f5f3ff",color:m.indiaOrAbroad==="India"?"#166534":m.indiaOrAbroad==="Abroad"?"#1e40af":"#5b21b6",borderRadius:6,padding:"2px 8px",fontSize:10,fontWeight:700,border:`1px solid ${m.indiaOrAbroad==="India"?"#86efac":m.indiaOrAbroad==="Abroad"?"#93c5fd":"#c4b5fd"}`}}>
+                        {m.indiaOrAbroad==="India"?"🇮🇳 India":m.indiaOrAbroad==="Abroad"?"✈️ Abroad":"🌐 Both"}
+                      </span>
+                    )}
+                  </div>
+                  <div style={{display:"flex",gap:12,alignItems:"center",flexWrap:"wrap"}}>
+                    <span style={{background:catInfo.bg,color:catInfo.color,borderRadius:6,padding:"2px 8px",fontSize:11,fontWeight:700,border:`1px solid ${catInfo.border}`}}>{m.sub}</span>
+                    <span style={{fontSize:12,color:C.textSec,fontWeight:700}}>⬇️ {m.downloads.toLocaleString()} downloads</span>
+                    {viewed&&<span style={{fontSize:12,color:C.textSec,fontWeight:700}}>👁 {viewed.views.toLocaleString()} views</span>}
+                    {viewed&&<span style={{fontSize:12,fontWeight:800,color:Math.round((viewed.reads/viewed.views)*100)>=70?"#166534":"#92400e",background:Math.round((viewed.reads/viewed.views)*100)>=70?"#f0fdf4":"#fffbeb",borderRadius:6,padding:"2px 8px"}}>{Math.round((viewed.reads/viewed.views)*100)}% read rate</span>}
+                  </div>
+                </div>
+                <div style={{background:catInfo.bg,color:catInfo.color,borderRadius:10,padding:"6px 14px",fontSize:13,fontWeight:900,border:`1px solid ${catInfo.border}`,flexShrink:0}}>#{i+1}</div>
+              </div>
+              <div>
+                <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:C.textMut,marginBottom:3}}>
+                  <span>Downloads</span><span style={{fontWeight:700,color:catInfo.color}}>{pct}% of top</span>
+                </div>
+                <div style={{height:7,background:C.border,borderRadius:8,overflow:"hidden"}}>
+                  <div style={{width:`${pct}%`,height:"100%",background:`linear-gradient(90deg,${catInfo.color},${catInfo.color}88)`,borderRadius:8,transition:"width 1.2s ease"}}/>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
 
   return (
     <div>
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:22}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:22,flexWrap:"wrap",gap:12}}>
         <h1 style={{fontSize:22,fontWeight:900,margin:0}}>📊 Student Analytics</h1>
-        <div style={{display:"flex",gap:8,background:C.elevated,borderRadius:10,padding:4,border:`1px solid ${C.border}`}}>
-          {[["college","🏛️ By College"],["material","📚 By Material"]].map(([v,l])=>(
-            <button key={v} onClick={()=>setView(v)} style={{padding:"8px 18px",borderRadius:8,border:"none",cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"inherit",background:view===v?"linear-gradient(135deg,#fffbeb,#fef3c7)":C.elevated,color:view===v?C.amberDim:C.textSec,transition:"all 0.18s"}}>{l}</button>
+        <div style={{display:"flex",gap:6,background:C.elevated,borderRadius:12,padding:4,border:`1px solid ${C.border}`,flexWrap:"wrap"}}>
+          {deptTabs.map(tab=>(
+            <button key={tab.id} onClick={()=>{setView(tab.id);setHigherFilter("all");}} style={{padding:"8px 14px",borderRadius:9,border:"none",cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"inherit",background:view===tab.id?`linear-gradient(135deg,#fffbeb,#fef3c7)`:C.elevated,color:view===tab.id?C.amberDim:C.textSec,transition:"all 0.18s",whiteSpace:"nowrap"}}>{tab.label}</button>
           ))}
         </div>
       </div>
@@ -3509,6 +3869,7 @@ function StudentAnalyticsDashboard({ materials, students }) {
         ))}
       </div>
 
+      {/* By College View */}
       {view==="college" && (
         <div>
           <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>🏛️ Readers by College</div>
@@ -3547,48 +3908,51 @@ function StudentAnalyticsDashboard({ materials, students }) {
         </div>
       )}
 
-      {view==="material" && (
+      {/* Private Sector View */}
+      {view==="private" && (
         <div>
-          <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>📚 Most Viewed & Read Materials</div>
-          <div style={{display:"flex",flexDirection:"column",gap:12}}>
-            {MOST_VIEWED_MATERIALS.map((mat,i)=>{
-              const cat = CATEGORIES[mat.category];
-              const readPct = Math.round((mat.reads/mat.views)*100);
-              const maxV = MOST_VIEWED_MATERIALS[0].views;
-              const viewPct = Math.round((mat.views/maxV)*100);
-              return (
-                <div key={mat.id} style={{background:C.surface,border:`1.5px solid ${cat.color}22`,borderRadius:14,padding:"18px 20px",animation:`cardIn 0.35s ease ${i*0.07}s both`,boxShadow:C.shadow}}>
-                  <div style={{display:"flex",alignItems:"center",gap:14,marginBottom:12}}>
-                    <div style={{width:48,height:48,borderRadius:12,background:cat.bg,display:"flex",alignItems:"center",justifyContent:"center",fontSize:24,flexShrink:0,border:`1px solid ${cat.border}`}}>{mat.emoji}</div>
-                    <div style={{flex:1}}>
-                      <div style={{fontWeight:800,fontSize:14,marginBottom:4}}>{mat.title}</div>
-                      <div style={{display:"flex",gap:14,alignItems:"center",flexWrap:"wrap"}}>
-                        <span style={{background:cat.bg,color:cat.color,borderRadius:6,padding:"2px 8px",fontSize:11,fontWeight:700,border:`1px solid ${cat.border}`}}>{cat.label}</span>
-                        <span style={{fontSize:12,color:C.textSec,fontWeight:700}}>👁 {mat.views.toLocaleString()} views</span>
-                        <span style={{fontSize:12,color:C.textSec,fontWeight:700}}>📖 {mat.reads.toLocaleString()} reads</span>
-                        <span style={{fontSize:12,fontWeight:800,color:readPct>=70?"#166534":"#92400e",background:readPct>=70?"#f0fdf4":"#fffbeb",borderRadius:6,padding:"2px 8px"}}>{readPct}% read rate</span>
-                      </div>
-                    </div>
-                    <div style={{background:cat.bg,color:cat.color,borderRadius:10,padding:"6px 14px",fontSize:13,fontWeight:900,border:`1px solid ${cat.border}`,flexShrink:0}}>#{i+1}</div>
-                  </div>
-                  <div>
-                    <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:C.textMut,marginBottom:3}}>
-                      <span>Views</span><span style={{fontWeight:700,color:cat.color}}>{viewPct}% of top</span>
-                    </div>
-                    <div style={{height:7,background:C.border,borderRadius:8,overflow:"hidden",marginBottom:6}}>
-                      <div style={{width:`${viewPct}%`,height:"100%",background:`linear-gradient(90deg,${cat.color},${cat.color}88)`,borderRadius:8,transition:"width 1.2s ease"}}/>
-                    </div>
-                    <div style={{display:"flex",justifyContent:"space-between",fontSize:10,color:C.textMut,marginBottom:3}}>
-                      <span>Reads</span><span style={{fontWeight:700,color:"#166534"}}>{readPct}% of viewers read it</span>
-                    </div>
-                    <div style={{height:7,background:C.border,borderRadius:8,overflow:"hidden"}}>
-                      <div style={{width:`${readPct}%`,height:"100%",background:"linear-gradient(90deg,#10b981,#34d399)",borderRadius:8,transition:"width 1.2s ease 0.3s"}}/>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+          <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>🏢 Private Sector — Most Viewed Materials</div>
+          {renderDeptMaterials(getDeptMaterials("private"), "private")}
+        </div>
+      )}
+
+      {/* Government View */}
+      {view==="government" && (
+        <div>
+          <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1,marginBottom:14}}>🏛️ Government Exams — Most Viewed Materials</div>
+          {renderDeptMaterials(getDeptMaterials("government"), "government")}
+        </div>
+      )}
+
+      {/* Higher Education View with India/Abroad filter */}
+      {view==="higher" && (
+        <div>
+          <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:14,flexWrap:"wrap",gap:10}}>
+            <div style={{fontSize:11,color:C.textMut,fontWeight:800,textTransform:"uppercase",letterSpacing:1}}>🎓 Higher Education — Most Viewed Materials</div>
+            {/* India/Abroad filter */}
+            <div style={{display:"flex",gap:6,background:"linear-gradient(135deg,#ede9fe,#ddd6fe)",borderRadius:12,padding:"6px 8px",border:"1.5px solid #c4b5fd"}}>
+              {[["all","🌐 All"],["India","🇮🇳 India"],["Abroad","✈️ Abroad"],["Both","🌐 Both"]].map(([v,l])=>(
+                <button key={v} onClick={()=>setHigherFilter(v)} style={{padding:"6px 12px",borderRadius:8,border:"none",cursor:"pointer",fontSize:11,fontWeight:700,fontFamily:"inherit",background:higherFilter===v?"#7c3aed":"rgba(255,255,255,0.6)",color:higherFilter===v?"#fff":"#5b21b6",transition:"all 0.18s",whiteSpace:"nowrap"}}>
+                  {l}
+                </button>
+              ))}
+            </div>
           </div>
+          {/* Stats breakdown for higher */}
+          <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginBottom:18}}>
+            {[
+              {label:"India Materials",value:materials.filter(m=>m.category==="higher"&&(m.indiaOrAbroad==="India"||m.indiaOrAbroad==="Both")).length,icon:"🇮🇳",color:"#166534",bg:"#f0fdf4"},
+              {label:"Abroad Materials",value:materials.filter(m=>m.category==="higher"&&(m.indiaOrAbroad==="Abroad"||m.indiaOrAbroad==="Both")).length,icon:"✈️",color:"#1e40af",bg:"#eff6ff"},
+              {label:"Total Higher Ed",value:materials.filter(m=>m.category==="higher").length,icon:"🎓",color:"#5b21b6",bg:"#f5f3ff"},
+            ].map((s,i)=>(
+              <div key={i} style={{background:s.bg,border:`1px solid ${s.color}33`,borderRadius:12,padding:"14px 16px",animation:`cardIn 0.3s ease ${i*0.07}s both`}}>
+                <div style={{fontSize:20,marginBottom:6}}>{s.icon}</div>
+                <div style={{fontSize:22,fontWeight:900,color:s.color}}>{s.value}</div>
+                <div style={{fontSize:11,color:C.textMut,fontWeight:600}}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+          {renderDeptMaterials(getHigherMaterials(), "higher")}
         </div>
       )}
     </div>
@@ -3610,6 +3974,7 @@ function AdminDashboard({ onBack }) {
   const [deleteConfirm, setDelConf]= useState(null);
   const [selectedStudent, setSelStu]= useState(null);
   const [animIn, setAnimIn]       = useState(false);
+  const [addingSoonPopup, setAddingSoonPopup] = useState(null); // ← new
   const { toasts, add: toast }    = useToast();
 
   useEffect(()=>{
@@ -3644,10 +4009,13 @@ function AdminDashboard({ onBack }) {
     toast(`✅ "${req.title}" approved!`,"success");
   };
 
-  const rejectRequest=id=>{
-    const updatedR=_globalRequests.map(r=>r.id===id?{...r,status:"rejected"}:r);
-    _globalRequests=updatedR;setRequests([...updatedR]);
-    toast("Request rejected","error");
+  // Replace rejectRequest with markAddingSoon
+  const markAddingSoon = (id) => {
+    const updatedR = _globalRequests.map(r => r.id === id ? {...r, status:"coming_soon"} : r);
+    _globalRequests = updatedR;
+    setRequests([...updatedR]);
+    setAddingSoonPopup(null);
+    toast("📅 Student notified! Material is being added soon.","info");
   };
 
   const filtered=materials.filter(m=>m.title.toLowerCase().includes(search.toLowerCase())&&(filterCat==="all"||m.category===filterCat)&&(filterType==="all"||m.type===filterType));
@@ -3660,7 +4028,6 @@ function AdminDashboard({ onBack }) {
     students:students.length,pending:pendingReqs.length,
   };
 
-  // CHANGE 2: Added student-analytics tab
   const TABS=[
     {id:"overview",label:"📊 Overview"},{id:"materials",label:"📚 Materials"},
     {id:"requests",label:`📨 Requests ${stats.pending>0?`(${stats.pending})`:""}`},
@@ -3669,11 +4036,18 @@ function AdminDashboard({ onBack }) {
     {id:"categories",label:"🏷️ Categories"},
   ];
 
+  const getStatusBadge = (status) => {
+    if (status === "approved") return { bg:"#f0fdf4",color:"#166534",border:"#86efac",text:"✅ Approved" };
+    if (status === "coming_soon") return { bg:"#eff6ff",color:"#1e40af",border:"#93c5fd",text:"📅 Adding Soon" };
+    return { bg:"#fffbeb",color:"#92400e",border:"#fcd34d",text:"⏳ Pending" };
+  };
+
   return (
     <div style={{minHeight:"100vh",background:C.bg,color:C.textPri,fontFamily:"'Nunito',sans-serif"}}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
         @keyframes cardIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes orbPulse{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:0.8;transform:scale(1.08)}}
         .row-hover:hover{background:#f8fafc!important;}
         .btn-sm:hover{filter:brightness(1.08);transform:translateY(-1px);}
         .btn-sm{transition:all 0.15s ease;}
@@ -3842,8 +4216,9 @@ function AdminDashboard({ onBack }) {
                 {requests.map((r,i)=>{
                   const cat=CATEGORIES[r.category];
                   const stu=students.find(s=>s.id===r.studentId);
+                  const badge = getStatusBadge(r.status);
                   return (
-                    <div key={r.id} style={{background:C.surface,border:`1.5px solid ${r.status==="pending"?"#fcd34d":r.status==="approved"?"#86efac":"#fca5a5"}`,borderRadius:16,padding:"20px 24px",boxShadow:C.shadow,animation:`cardIn 0.35s ease ${i*0.05}s both`}}>
+                    <div key={r.id} style={{background:C.surface,border:`1.5px solid ${r.status==="pending"?"#fcd34d":r.status==="approved"?"#86efac":"#93c5fd"}`,borderRadius:16,padding:"20px 24px",boxShadow:C.shadow,animation:`cardIn 0.35s ease ${i*0.05}s both`}}>
                       <div style={{display:"flex",gap:16,alignItems:"flex-start"}}>
                         <div style={{width:44,height:44,borderRadius:"50%",background:"#fffbeb",border:"1.5px solid #fcd34d",display:"flex",alignItems:"center",justifyContent:"center",color:C.amberDim,fontWeight:800,fontSize:13,flexShrink:0}}>{stu?.avatar||"??"}</div>
                         <div style={{flex:1}}>
@@ -3859,11 +4234,12 @@ function AdminDashboard({ onBack }) {
                             <div style={{display:"flex",flexDirection:"column",gap:7}}>
                               <button className="btn-sm" onClick={()=>approveRequest(r,true)} style={{background:"#f0fdf4",color:"#166534",border:"1.5px solid #86efac",borderRadius:9,padding:"8px 14px",cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"inherit",whiteSpace:"nowrap"}}>✅ Approve for {r.studentName.split(" ")[0]}</button>
                               <button className="btn-sm" onClick={()=>approveRequest(r,false)} style={{background:"#fffbeb",color:"#92400e",border:"1.5px solid #fcd34d",borderRadius:9,padding:"8px 14px",cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"inherit",whiteSpace:"nowrap"}}>🌐 Approve for All</button>
-                              <button className="btn-sm" onClick={()=>rejectRequest(r.id)} style={{background:"#fef2f2",color:"#991b1b",border:"1.5px solid #fca5a5",borderRadius:9,padding:"8px 14px",cursor:"pointer",fontSize:12,fontWeight:600,fontFamily:"inherit"}}>❌ Reject</button>
+                              {/* REPLACED REJECT with Adding Soon notification */}
+                              <button className="btn-sm" onClick={()=>setAddingSoonPopup(r)} style={{background:"linear-gradient(135deg,#eff6ff,#dbeafe)",color:"#1e40af",border:"1.5px solid #93c5fd",borderRadius:9,padding:"8px 14px",cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"inherit",whiteSpace:"nowrap"}}>📅 Adding Soon</button>
                             </div>
                           ):(
-                            <div style={{display:"inline-block",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,background:r.status==="approved"?"#f0fdf4":"#fef2f2",color:r.status==="approved"?"#166534":"#991b1b",border:`1.5px solid ${r.status==="approved"?"#86efac":"#fca5a5"}`}}>
-                              {r.status==="approved"?"✅ Approved":"❌ Rejected"}
+                            <div style={{display:"inline-block",borderRadius:9,padding:"7px 16px",fontSize:12,fontWeight:700,background:badge.bg,color:badge.color,border:`1.5px solid ${badge.border}`}}>
+                              {badge.text}
                             </div>
                           )}
                         </div>
@@ -3916,10 +4292,9 @@ function AdminDashboard({ onBack }) {
         )}
 
         {activeTab==="students"&&selectedStudent&&(
-          <StudentDetail student={selectedStudent} materials={materials} requests={requests} onBack={()=>setSelStu(null)} onApprove={approveRequest} onReject={rejectRequest} toast={toast}/>
+          <StudentDetail student={selectedStudent} materials={materials} requests={requests} onBack={()=>setSelStu(null)} onApprove={approveRequest} onMarkAddingSoon={(id)=>{ const updatedR=_globalRequests.map(r=>r.id===id?{...r,status:"coming_soon"}:r); _globalRequests=updatedR; setRequests([...updatedR]); toast("📅 Student notified!","info"); }} toast={toast}/>
         )}
 
-        {/* CHANGE 2: Student Analytics Tab */}
         {activeTab==="student-analytics"&&(
           <StudentAnalyticsDashboard materials={materials} students={students}/>
         )}
@@ -3944,13 +4319,8 @@ function AdminDashboard({ onBack }) {
                         <div key={s} style={{position:"relative"}}>
                           <span style={{background:C.elevated,color:C.textSec,borderRadius:7,padding:"5px 11px",fontSize:12,border:`1px solid ${C.border}`,fontWeight:600,display:"inline-flex",alignItems:"center",gap:5}}>
                             {s}
-                            {/* CHANGE 2: Higher Education gets India/Abroad indicator */}
                             {key==="higher"&&(
-                              <span style={{
-                                background: HIGHER_INDIA_ABROAD[s]==="India"?"#f0fdf4":HIGHER_INDIA_ABROAD[s]==="Abroad"?"#eff6ff":"#f5f3ff",
-                                color: HIGHER_INDIA_ABROAD[s]==="India"?"#166534":HIGHER_INDIA_ABROAD[s]==="Abroad"?"#1e40af":"#5b21b6",
-                                borderRadius:4,padding:"1px 5px",fontSize:9,fontWeight:800,
-                              }}>
+                              <span style={{background:HIGHER_INDIA_ABROAD[s]==="India"?"#f0fdf4":HIGHER_INDIA_ABROAD[s]==="Abroad"?"#eff6ff":"#f5f3ff",color:HIGHER_INDIA_ABROAD[s]==="India"?"#166534":HIGHER_INDIA_ABROAD[s]==="Abroad"?"#1e40af":"#5b21b6",borderRadius:4,padding:"1px 5px",fontSize:9,fontWeight:800}}>
                                 {HIGHER_INDIA_ABROAD[s]==="India"?"🇮🇳 IN":HIGHER_INDIA_ABROAD[s]==="Abroad"?"✈️ Abroad":"🌐 Both"}
                               </span>
                             )}
@@ -3958,7 +4328,6 @@ function AdminDashboard({ onBack }) {
                         </div>
                       ))}
                     </div>
-                    {/* CHANGE 2: Higher Education India/Abroad dropdowns */}
                     {key==="higher"&&(
                       <div style={{marginBottom:14,background:"linear-gradient(135deg,#ede9fe,#ddd6fe)",border:"1px solid #c4b5fd",borderRadius:10,padding:"12px 14px"}}>
                         <div style={{fontSize:11,color:"#5b21b6",fontWeight:800,marginBottom:8,textTransform:"uppercase",letterSpacing:0.5}}>🌍 Filter by Destination</div>
@@ -4009,13 +4378,26 @@ function AdminDashboard({ onBack }) {
           </div>
         </div>
       )}
+      {/* Adding Soon Popup */}
+      {addingSoonPopup && (
+        <AddingSoonPopup
+          request={addingSoonPopup}
+          onConfirm={() => markAddingSoon(addingSoonPopup.id)}
+          onClose={() => setAddingSoonPopup(null)}
+        />
+      )}
     </div>
   );
 }
 
-function StudentDetail({ student:s, materials, requests, onBack, onApprove, onReject, toast }) {
+function StudentDetail({ student:s, materials, requests, onBack, onApprove, onMarkAddingSoon, toast }) {
   const stuMats=materials.filter(m=>m.studentId===s.id);
   const stuReqs=requests.filter(r=>r.studentId===s.id);
+  const getStatusBadge = (status) => {
+    if (status === "approved") return { bg:"#f0fdf4",color:"#166534",border:"#86efac",text:"✅ Approved" };
+    if (status === "coming_soon") return { bg:"#eff6ff",color:"#1e40af",border:"#93c5fd",text:"📅 Adding Soon" };
+    return null;
+  };
   return (
     <div>
       <button onClick={onBack} style={{background:C.elevated,border:`1px solid ${C.border}`,color:C.textSec,borderRadius:9,padding:"8px 16px",cursor:"pointer",fontSize:12,marginBottom:22,fontFamily:"inherit",fontWeight:700}}>← All Students</button>
@@ -4051,20 +4433,23 @@ function StudentDetail({ student:s, materials, requests, onBack, onApprove, onRe
         </div>
         <div>
           <h3 style={{color:C.textSec,fontSize:14,fontWeight:800,marginBottom:14}}>📨 Requests ({stuReqs.length})</h3>
-          {stuReqs.length===0?<div style={{color:C.textMut,fontSize:13,padding:"20px 0",fontWeight:600}}>No requests yet</div>:stuReqs.map(r=>(
-            <div key={r.id} style={{background:C.surface,border:`1.5px solid ${r.status==="pending"?"#fcd34d":r.status==="approved"?"#86efac":"#fca5a5"}`,borderRadius:12,padding:"13px 15px",marginBottom:9,boxShadow:C.shadow}}>
-              <div style={{fontWeight:700,fontSize:13,marginBottom:4}}>{r.title}</div>
-              <div style={{fontSize:11,color:C.textMut,fontStyle:"italic",marginBottom:9}}>"{r.reason}"</div>
-              {r.status==="pending"?(
-                <div style={{display:"flex",gap:7}}>
-                  <button onClick={()=>{onApprove(r,true);toast(`Approved for ${s.name}`,"success");}} style={{flex:1,background:"#f0fdf4",color:"#166534",border:"1.5px solid #86efac",borderRadius:8,padding:"7px 0",cursor:"pointer",fontSize:11,fontWeight:700,fontFamily:"inherit"}}>✅ Approve</button>
-                  <button onClick={()=>onReject(r.id)} style={{background:"#fef2f2",color:"#991b1b",border:"1.5px solid #fca5a5",borderRadius:8,padding:"7px 12px",cursor:"pointer",fontSize:11,fontFamily:"inherit"}}>✕</button>
-                </div>
-              ):(
-                <span style={{fontSize:11,fontWeight:700,color:r.status==="approved"?"#166534":"#991b1b"}}>{r.status==="approved"?"✅ Approved":"❌ Rejected"}</span>
-              )}
-            </div>
-          ))}
+          {stuReqs.length===0?<div style={{color:C.textMut,fontSize:13,padding:"20px 0",fontWeight:600}}>No requests yet</div>:stuReqs.map(r=>{
+            const badge = getStatusBadge(r.status);
+            return (
+              <div key={r.id} style={{background:C.surface,border:`1.5px solid ${r.status==="pending"?"#fcd34d":r.status==="approved"?"#86efac":"#93c5fd"}`,borderRadius:12,padding:"13px 15px",marginBottom:9,boxShadow:C.shadow}}>
+                <div style={{fontWeight:700,fontSize:13,marginBottom:4}}>{r.title}</div>
+                <div style={{fontSize:11,color:C.textMut,fontStyle:"italic",marginBottom:9}}>"{r.reason}"</div>
+                {r.status==="pending"?(
+                  <div style={{display:"flex",gap:7}}>
+                    <button onClick={()=>{onApprove(r,true);toast(`Approved for ${s.name}`,"success");}} style={{flex:1,background:"#f0fdf4",color:"#166534",border:"1.5px solid #86efac",borderRadius:8,padding:"7px 0",cursor:"pointer",fontSize:11,fontWeight:700,fontFamily:"inherit"}}>✅ Approve</button>
+                    <button onClick={()=>onMarkAddingSoon(r.id)} style={{flex:1,background:"linear-gradient(135deg,#eff6ff,#dbeafe)",color:"#1e40af",border:"1.5px solid #93c5fd",borderRadius:8,padding:"7px 0",cursor:"pointer",fontSize:11,fontWeight:700,fontFamily:"inherit"}}>📅 Soon</button>
+                  </div>
+                ):(
+                  badge && <span style={{fontSize:11,fontWeight:700,color:badge.color,background:badge.bg,border:`1px solid ${badge.border}`,borderRadius:7,padding:"4px 10px"}}>{badge.text}</span>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
@@ -4076,8 +4461,7 @@ function AddMaterialModal({ item, students, onClose, onSave }) {
     title:item?.title||"",category:item?.category||"private",sub:item?.sub||"IT",
     type:item?.type||"free",pages:item?.pages||"",topics:item?.topics||"",
     emoji:item?.emoji||"📄",uploadType:item?.uploadType||"",fileLink:item?.fileLink||"",
-    studentId:item?.studentId||"",
-    indiaOrAbroad:item?.indiaOrAbroad||"",  // CHANGE 2: new field
+    studentId:item?.studentId||"",indiaOrAbroad:item?.indiaOrAbroad||"",
   });
   const set=(k,v)=>setForm(p=>({...p,[k]:v}));
   const EMOJIS=["📄","☕","🐍","🌲","📊","🏦","🏧","📜","📐","🔬","🔤","💼","🌾","⚔️","🚂","📝","🔷","🎯","🧮","🔐"];
@@ -4112,7 +4496,6 @@ function AddMaterialModal({ item, students, onClose, onSave }) {
               {CATEGORY_SUBS[form.category].map(s=><option key={s} value={s}>{s}</option>)}
             </select>
           </div>
-          {/* CHANGE 2: India/Abroad dropdowns for Higher Education */}
           {isHigher&&(
             <div style={{background:"linear-gradient(135deg,#ede9fe,#ddd6fe)",border:"1.5px solid #c4b5fd",borderRadius:12,padding:"14px 16px"}}>
               <div style={{fontSize:11,color:"#5b21b6",fontWeight:800,marginBottom:10,textTransform:"uppercase",letterSpacing:0.5}}>🌍 Higher Education Destination</div>
@@ -4187,12 +4570,9 @@ function PreviewModal({ item:m, students, onClose }) {
         <div style={{padding:24}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:16}}>
             {[
-              ["Category",cat.label],
-              ["Type",m.type],
-              ["Downloads",m.downloads.toLocaleString()],
-              ["Progress",`${m.progress}%`],
-              ["Upload",m.uploadType||"None"],
-              ["Assigned To",stu?.name||"All Students"],
+              ["Category",cat.label],["Type",m.type],
+              ["Downloads",m.downloads.toLocaleString()],["Progress",`${m.progress}%`],
+              ["Upload",m.uploadType||"None"],["Assigned To",stu?.name||"All Students"],
               ...(m.category==="higher"&&m.indiaOrAbroad?[["Destination",m.indiaOrAbroad==="India"?"🇮🇳 India":m.indiaOrAbroad==="Abroad"?"✈️ Abroad":"🌐 Both"]]:[]),
             ].map(([k,v])=>(
               <div key={k} style={{background:C.elevated,borderRadius:10,padding:"11px 14px",border:`1px solid ${C.border}`}}>
@@ -4212,7 +4592,7 @@ function PreviewModal({ item:m, students, onClose }) {
   );
 }
 
-// ─── HOME ─────────────────────────────────────────────────────────────────────
+// ─── HOME (Overall Dashboard button REMOVED) ─────────────────────────────────
 export default function App() {
   const [screen, setScreen] = useState("home");
   const [animIn, setAnimIn] = useState(false);
@@ -4220,7 +4600,6 @@ export default function App() {
 
   if(screen==="student")  return <StudentDashboard onBack={()=>setScreen("home")}/>;
   if(screen==="admin")    return <AdminDashboard   onBack={()=>setScreen("home")}/>;
-  if(screen==="overall")  return <OverallDashboard onBack={()=>setScreen("home")}/>;
 
   return (
     <div style={{minHeight:"100vh",background:"linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 30%,#fef3c7 70%,#fff7ed 100%)",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"'Nunito',sans-serif",position:"relative",overflow:"hidden"}}>
@@ -4233,13 +4612,11 @@ export default function App() {
         @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(200%)}}
         @keyframes bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
         @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,0.3)}50%{box-shadow:0 0 0 10px rgba(245,158,11,0)}}
-        @keyframes float2{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(3deg)}}
       `}</style>
 
       <div style={{position:"absolute",width:500,height:500,borderRadius:"50%",background:"radial-gradient(circle,rgba(245,158,11,0.15) 0%,transparent 70%)",top:"-10%",left:"-5%",animation:"orbPulse 6s ease-in-out infinite"}}/>
       <div style={{position:"absolute",width:400,height:400,borderRadius:"50%",background:"radial-gradient(circle,rgba(99,102,241,0.12) 0%,transparent 70%)",bottom:"0%",right:"-5%",animation:"orbPulse 6s ease-in-out infinite 2s"}}/>
       <div style={{position:"absolute",width:300,height:300,borderRadius:"50%",background:"radial-gradient(circle,rgba(16,185,129,0.10) 0%,transparent 70%)",top:"40%",right:"15%",animation:"orbPulse 8s ease-in-out infinite 1s"}}/>
-      <div style={{position:"absolute",width:200,height:200,borderRadius:"50%",background:"radial-gradient(circle,rgba(59,130,246,0.10) 0%,transparent 70%)",bottom:"20%",left:"10%",animation:"orbPulse 7s ease-in-out infinite 3s"}}/>
 
       <div style={{textAlign:"center",zIndex:1,padding:"0 20px",opacity:animIn?1:0,transform:animIn?"scale(1)":"scale(0.94)",transition:"all 0.6s cubic-bezier(.4,0,.2,1)"}}>
         <div style={{fontSize:80,marginBottom:16,animation:"float 3.5s ease-in-out infinite",filter:"drop-shadow(0 8px 24px rgba(245,158,11,0.3))"}}>📚</div>
@@ -4251,29 +4628,18 @@ export default function App() {
           Your complete digital learning hub — study materials, mock tests, crash courses, career guidance & more
         </p>
 
+        {/* Only 2 buttons — Overall Dashboard removed */}
         <div style={{display:"flex",gap:16,justifyContent:"center",flexWrap:"wrap",animation:"fadeUp 0.7s ease 0.5s both"}}>
-          <button onClick={()=>setScreen("student")} style={{background:"linear-gradient(135deg,#f59e0b,#fbbf24)",color:"#fff",border:"none",borderRadius:16,padding:"18px 36px",fontSize:16,fontWeight:900,cursor:"pointer",boxShadow:"0 10px 36px rgba(245,158,11,0.4)",transition:"all 0.25s",fontFamily:"inherit"}}
+          <button onClick={()=>setScreen("student")} style={{background:"linear-gradient(135deg,#f59e0b,#fbbf24)",color:"#fff",border:"none",borderRadius:16,padding:"18px 48px",fontSize:16,fontWeight:900,cursor:"pointer",boxShadow:"0 10px 36px rgba(245,158,11,0.4)",transition:"all 0.25s",fontFamily:"inherit"}}
             onMouseEnter={e=>{e.target.style.transform="translateY(-4px) scale(1.03)";e.target.style.boxShadow="0 18px 50px rgba(245,158,11,0.45)";}}
             onMouseLeave={e=>{e.target.style.transform="translateY(0) scale(1)";e.target.style.boxShadow="0 10px 36px rgba(245,158,11,0.4)";}}>
             🎓 Student Dashboard
           </button>
 
-          <button onClick={()=>setScreen("admin")} style={{background:"#fff",color:C.textPri,border:"1.5px solid #e2e8f0",borderRadius:16,padding:"18px 36px",fontSize:16,fontWeight:900,cursor:"pointer",boxShadow:"0 8px 28px rgba(15,23,42,0.1)",transition:"all 0.25s",fontFamily:"inherit"}}
+          <button onClick={()=>setScreen("admin")} style={{background:"#fff",color:C.textPri,border:"1.5px solid #e2e8f0",borderRadius:16,padding:"18px 48px",fontSize:16,fontWeight:900,cursor:"pointer",boxShadow:"0 8px 28px rgba(15,23,42,0.1)",transition:"all 0.25s",fontFamily:"inherit"}}
             onMouseEnter={e=>{e.target.style.transform="translateY(-4px)";e.target.style.borderColor=C.amber;e.target.style.color=C.amber;e.target.style.boxShadow="0 16px 44px rgba(15,23,42,0.14)";}}
             onMouseLeave={e=>{e.target.style.transform="translateY(0)";e.target.style.borderColor="#e2e8f0";e.target.style.color=C.textPri;e.target.style.boxShadow="0 8px 28px rgba(15,23,42,0.1)";}}>
             ⚙️ Admin Panel
-          </button>
-
-          <button onClick={()=>setScreen("overall")} style={{
-            background:"linear-gradient(135deg,#3b82f6,#6366f1)",
-            color:"#fff",border:"none",borderRadius:16,padding:"18px 36px",fontSize:16,fontWeight:900,
-            cursor:"pointer",boxShadow:"0 10px 36px rgba(59,130,246,0.4)",transition:"all 0.25s",fontFamily:"inherit",
-            position:"relative",overflow:"hidden",
-          }}
-            onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px) scale(1.03)";e.currentTarget.style.boxShadow="0 18px 50px rgba(59,130,246,0.5)";}}
-            onMouseLeave={e=>{e.currentTarget.style.transform="translateY(0) scale(1)";e.currentTarget.style.boxShadow="0 10px 36px rgba(59,130,246,0.4)";}}>
-            <span style={{animation:"float2 2.5s ease-in-out infinite",display:"inline-block",marginRight:8}}>🌐</span>
-            Overall Dashboard
           </button>
         </div>
 
